@@ -1,0 +1,2482 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+
+<head>
+
+    <style type="text/css" media="screen">
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active,
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td a.ui-state-active:hover,
+        body #booked-profile-page input[type=submit].button-primary:hover,
+        body .booked-list-view button.button:hover,
+        body .booked-list-view input[type=submit].button-primary:hover,
+        body table.booked-calendar input[type=submit].button-primary:hover,lk
+        body .booked-modal input[type=submit].button-primary:hover,
+        body table.booked-calendar th,
+        body table.booked-calendar thead,
+        body table.booked-calendar thead th,
+        body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+        body #booked-profile-page .booked-profile-header,
+        body #booked-profile-page .booked-tabs li.active a,
+        body #booked-profile-page .booked-tabs li.active a:hover,
+        body #booked-profile-page .appt-block .google-cal-button>a:hover,
+        #ui-datepicker-div.booked_custom_date_picker .ui-datepicker-header {
+            background: #fdb1aa !important;
+        }
+
+        body #booked-profile-page input[type=submit].button-primary:hover,
+        body table.booked-calendar input[type=submit].button-primary:hover,
+        body .booked-list-view button.button:hover,
+        body .booked-list-view input[type=submit].button-primary:hover,
+        body .booked-modal input[type=submit].button-primary:hover,
+        body table.booked-calendar th,
+        body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button:hover,
+        body #booked-profile-page .booked-profile-header,
+        body #booked-profile-page .appt-block .google-cal-button>a:hover {
+            border-color: #fdb1aa !important;
+        }
+
+        body table.booked-calendar tr.days,
+        body table.booked-calendar tr.days th,
+        body .booked-calendarSwitcher.calendar,
+        body #booked-profile-page .booked-tabs,
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead,
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar thead th {
+            background: #fdb1aa !important;
+        }
+
+        body table.booked-calendar tr.days th,
+        body #booked-profile-page .booked-tabs {
+            border-color: #fdb1aa !important;
+        }
+
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a,
+        #ui-datepicker-div.booked_custom_date_picker table.ui-datepicker-calendar tbody td.ui-datepicker-today a:hover,
+        body #booked-profile-page input[type=submit].button-primary,
+        body table.booked-calendar input[type=submit].button-primary,
+        body .booked-list-view button.button,
+        body .booked-list-view input[type=submit].button-primary,
+        body .booked-list-view button.button,
+        body .booked-list-view input[type=submit].button-primary,
+        body .booked-modal input[type=submit].button-primary,
+        body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,
+        body #booked-profile-page .booked-profile-appt-list .appt-block.approved .status-block,
+        body #booked-profile-page .appt-block .google-cal-button>a,
+        body .booked-modal p.booked-title-bar,
+        body table.booked-calendar td:hover .date span,
+        body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,
+        body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover,
+        .booked-ms-modal .booked-book-appt
+        /* Multi-Slot Booking */
+
+            {
+            background: #fdb1aa;
+        }
+
+        body #booked-profile-page input[type=submit].button-primary,
+        body table.booked-calendar input[type=submit].button-primary,
+        body .booked-list-view button.button,
+        body .booked-list-view input[type=submit].button-primary,
+        body .booked-list-view button.button,
+        body .booked-list-view input[type=submit].button-primary,
+        body .booked-modal input[type=submit].button-primary,
+        body #booked-profile-page .appt-block .google-cal-button>a,
+        body table.booked-calendar .booked-appt-list .timeslot .timeslot-people button,
+        body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active,
+        body .booked-list-view a.booked_list_date_picker_trigger.booked-dp-active:hover {
+            border-color: #fdb1aa;
+        }
+
+        body .booked-modal .bm-window p i.fa,
+        body .booked-modal .bm-window a,
+        body .booked-appt-list .booked-public-appointment-title,
+        body .booked-modal .bm-window p.appointment-title,
+        .booked-ms-modal.visible:hover .booked-book-appt {
+            color: #fdb1aa;
+        }
+
+        .booked-appt-list .timeslot.has-title .booked-public-appointment-title {
+            color: inherit;
+        }
+    </style>
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="profile" href="cassienation%20logo.jpg" />
+    <link rel="pingback" href="cassienation%20logo.jpg" />
+    <link rel="shortcut icon" type="image/jpg" href="image/cassienation%20logo.jpg"/>
+
+    <!-- This site is optimized with the Yoast SEO plugin v19.2 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Cassienation Beauty Stop | The Best Of the Best</title>
+    <meta name="description" content="Cassienation Beauty Stop looks to deliver state-of-the-art nail care services to those with a true appreciation of self care." />
+    
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="CASSIENATION BEAUTY STOP" />
+    <meta property="og:description" content="Cassienation Beauty Stop looks to deliver state-of-the-art nail care services to those with a true appreciation of self-care." />
+    <meta property="og:url" content="https://www.Cassienation.co.ke" />
+    <meta property="og:site_name" content="Cassie Nation Beauty Stop" />
+    <meta property="article:modified_time" content="2020-08-08T12:47:13+00:00" />
+    <meta property="og:image" content="https://www.luxenails.co.ke/wp-content/uploads/2020/01/Nail-Extension-1-2.jpg" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta name="author" content="Frank" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="cassienation" />
+    <meta name="twitter:description" content="cassienation Beauty stop looks to deliver state-of-the-art nail care services to those with a true appreciation of self-care." />
+    <meta name="twitter:image" content="https://www.luxenails.co.ke/wp-content/uploads/2020/01/Artboard-1.png" />
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="3 minutes" />
+    <meta name="google-site-verification" content="yQLsDTVZ0LA24YOkTjXEsEX_wblDE6oN_pR9sZiY5nU" />
+    <!-- / Yoast SEO plugin. -->
+
+
+    <link rel='dns-prefetch' href='//fonts.googleapis.com' />
+    <link rel='dns-prefetch' href='//s.w.org' />
+    <link rel="alternate" type="application/rss+xml" title="Cassienation &raquo; Feed" href="cassienation%20logo.jpg" />
+    <link rel="alternate" type="application/rss+xml" title="Cassienation &raquo; Comments Feed" href="cassienation%20logo.jpg" />
+    <script type="text/javascript">
+        window._wpemojiSettings = {
+            "baseUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/72x72\/",
+            "ext": ".png",
+            "svgUrl": "https:\/\/s.w.org\/images\/core\/emoji\/14.0.0\/svg\/",
+            "svgExt": ".svg",
+            "source": {
+                "concatemoji": "https:\/\/www.luxenails.co.ke\/wp-includes\/js\/wp-emoji-release.min.js?ver=6.0.3"
+            }
+        };
+        /*! This file is auto-generated */
+        ! function(e, a, t) {
+            var n, r, o, i = a.createElement("canvas"),
+                p = i.getContext && i.getContext("2d");
+
+            function s(e, t) {
+                var a = String.fromCharCode,
+                    e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL());
+                return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL()
+            }
+
+            function c(e) {
+                var t = a.createElement("script");
+                t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t)
+            }
+            for (o = Array("flag", "emoji"), t.supports = {
+                    everything: !0,
+                    everythingExceptFlag: !0
+                }, r = 0; r < o.length; r++) t.supports[o[r]] = function(e) {
+                if (!p || !p.fillText) return !1;
+                switch (p.textBaseline = "top", p.font = "600 32px Arial", e) {
+                    case "flag":
+                        return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]);
+                    case "emoji":
+                        return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999])
+                }
+                return !1
+            }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]);
+            t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function() {
+                t.DOMReady = !0
+            }, t.supports.everything || (n = function() {
+                t.readyCallback()
+            }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function() {
+                "complete" === a.readyState && t.readyCallback()
+            })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji)))
+        }(window, document, window._wpemojiSettings);
+    </script>
+    <style type="text/css">
+        img.wp-smiley,
+        img.emoji {
+            display: inline !important;
+            border: none !important;
+            box-shadow: none !important;
+            height: 1em !important;
+            width: 1em !important;
+            margin: 0 0.07em !important;
+            vertical-align: -0.1em !important;
+            background: none !important;
+            padding: 0 !important;
+        }
+    </style>
+    <link rel='stylesheet' id='swiper-css-css' href='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/styles/library/swiper.css?ver=7.0.0-alpha.21' type='text/css' media='all' />
+    <link rel='stylesheet' id='sbi_styles-css' href='https://www.luxenails.co.ke/wp-content/plugins/instagram-feed/css/sbi-styles.min.css?ver=6.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-block-library-css' href='https://www.luxenails.co.ke/wp-includes/css/dist/block-library/style.min.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='dashicons-css' href='https://www.luxenails.co.ke/wp-includes/css/dashicons.min.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='magnific-popup-css' href='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/styles/library/magnific-popup.css?ver=2.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpz-insta_block-frontend-style-css' href='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/styles/frontend/block.css?ver=abe5f50cc88d5abe11428e9648df5151' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=7.6.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='wc-blocks-style-css' href='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=7.6.2' type='text/css' media='all' />
+    <style id='joinchat-button-style-inline-css' type='text/css'>
+        .wp-block-joinchat-button {
+            border: none !important;
+            text-align: center
+        }
+
+        .wp-block-joinchat-button figure {
+            display: table;
+            margin: 0 auto;
+            padding: 0
+        }
+
+        .wp-block-joinchat-button figcaption {
+            font: normal normal 400 .6em/2em var(--wp--preset--font-family--system-font, sans-serif);
+            margin: 0;
+            padding: 0
+        }
+
+        .wp-block-joinchat-button .joinchat-button__qr {
+            background-color: #fff;
+            border: 6px solid #25d366;
+            border-radius: 30px;
+            box-sizing: content-box;
+            display: block;
+            height: 200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 10px;
+            width: 200px
+        }
+
+        .wp-block-joinchat-button .joinchat-button__qr canvas,
+        .wp-block-joinchat-button .joinchat-button__qr img {
+            display: block;
+            margin: auto
+        }
+
+        .wp-block-joinchat-button .joinchat-button__link {
+            align-items: center;
+            background-color: #25d366;
+            border: 6px solid #25d366;
+            border-radius: 30px;
+            display: inline-flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            line-height: 1.25em;
+            margin: 0 auto;
+            text-decoration: none
+        }
+
+        .wp-block-joinchat-button .joinchat-button__link:before {
+            background: transparent var(--joinchat-ico) no-repeat center;
+            background-size: 100%;
+            content: "";
+            display: block;
+            height: 1.5em;
+            margin: -.75em .75em -.75em 0;
+            width: 1.5em
+        }
+
+        .wp-block-joinchat-button figure+.joinchat-button__link {
+            margin-top: 10px
+        }
+
+        @media (orientation:landscape)and (min-height:481px),
+        (orientation:portrait)and (min-width:481px) {
+            .wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link {
+                display: none
+            }
+        }
+
+        @media (max-width:480px),
+        (orientation:landscape)and (max-height:480px) {
+            .wp-block-joinchat-button figure {
+                display: none
+            }
+        }
+    </style>
+    <style id='global-styles-inline-css' type='text/css'>
+        body {
+            --wp--preset--color--black: #000000;
+            --wp--preset--color--cyan-bluish-gray: #abb8c3;
+            --wp--preset--color--white: #ffffff;
+            --wp--preset--color--pale-pink: #f78da7;
+            --wp--preset--color--vivid-red: #cf2e2e;
+            --wp--preset--color--luminous-vivid-orange: #ff6900;
+            --wp--preset--color--luminous-vivid-amber: #fcb900;
+            --wp--preset--color--light-green-cyan: #7bdcb5;
+            --wp--preset--color--vivid-green-cyan: #00d084;
+            --wp--preset--color--pale-cyan-blue: #8ed1fc;
+            --wp--preset--color--vivid-cyan-blue: #0693e3;
+            --wp--preset--color--vivid-purple: #9b51e0;
+            --wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg, rgba(6, 147, 227, 1) 0%, rgb(155, 81, 224) 100%);
+            --wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg, rgb(122, 220, 180) 0%, rgb(0, 208, 130) 100%);
+            --wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg, rgba(252, 185, 0, 1) 0%, rgba(255, 105, 0, 1) 100%);
+            --wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg, rgba(255, 105, 0, 1) 0%, rgb(207, 46, 46) 100%);
+            --wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg, rgb(238, 238, 238) 0%, rgb(169, 184, 195) 100%);
+            --wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg, rgb(74, 234, 220) 0%, rgb(151, 120, 209) 20%, rgb(207, 42, 186) 40%, rgb(238, 44, 130) 60%, rgb(251, 105, 98) 80%, rgb(254, 248, 76) 100%);
+            --wp--preset--gradient--blush-light-purple: linear-gradient(135deg, rgb(255, 206, 236) 0%, rgb(152, 150, 240) 100%);
+            --wp--preset--gradient--blush-bordeaux: linear-gradient(135deg, rgb(254, 205, 165) 0%, rgb(254, 45, 45) 50%, rgb(107, 0, 62) 100%);
+            --wp--preset--gradient--luminous-dusk: linear-gradient(135deg, rgb(255, 203, 112) 0%, rgb(199, 81, 192) 50%, rgb(65, 88, 208) 100%);
+            --wp--preset--gradient--pale-ocean: linear-gradient(135deg, rgb(255, 245, 203) 0%, rgb(182, 227, 212) 50%, rgb(51, 167, 181) 100%);
+            --wp--preset--gradient--electric-grass: linear-gradient(135deg, rgb(202, 248, 128) 0%, rgb(113, 206, 126) 100%);
+            --wp--preset--gradient--midnight: linear-gradient(135deg, rgb(2, 3, 129) 0%, rgb(40, 116, 252) 100%);
+            --wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');
+            --wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');
+            --wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');
+            --wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');
+            --wp--preset--duotone--midnight: url('#wp-duotone-midnight');
+            --wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');
+            --wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');
+            --wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');
+            --wp--preset--font-size--small: 13px;
+            --wp--preset--font-size--medium: 20px;
+            --wp--preset--font-size--large: 36px;
+            --wp--preset--font-size--x-large: 42px;
+        }
+
+        .has-black-color {
+            color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-color {
+            color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-color {
+            color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-color {
+            color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-color {
+            color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-color {
+            color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-color {
+            color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-color {
+            color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-color {
+            color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-color {
+            color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-color {
+            color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-color {
+            color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-background-color {
+            background-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-background-color {
+            background-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-background-color {
+            background-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-background-color {
+            background-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-background-color {
+            background-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-background-color {
+            background-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-background-color {
+            background-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-background-color {
+            background-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-background-color {
+            background-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-background-color {
+            background-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-black-border-color {
+            border-color: var(--wp--preset--color--black) !important;
+        }
+
+        .has-cyan-bluish-gray-border-color {
+            border-color: var(--wp--preset--color--cyan-bluish-gray) !important;
+        }
+
+        .has-white-border-color {
+            border-color: var(--wp--preset--color--white) !important;
+        }
+
+        .has-pale-pink-border-color {
+            border-color: var(--wp--preset--color--pale-pink) !important;
+        }
+
+        .has-vivid-red-border-color {
+            border-color: var(--wp--preset--color--vivid-red) !important;
+        }
+
+        .has-luminous-vivid-orange-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-amber-border-color {
+            border-color: var(--wp--preset--color--luminous-vivid-amber) !important;
+        }
+
+        .has-light-green-cyan-border-color {
+            border-color: var(--wp--preset--color--light-green-cyan) !important;
+        }
+
+        .has-vivid-green-cyan-border-color {
+            border-color: var(--wp--preset--color--vivid-green-cyan) !important;
+        }
+
+        .has-pale-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--pale-cyan-blue) !important;
+        }
+
+        .has-vivid-cyan-blue-border-color {
+            border-color: var(--wp--preset--color--vivid-cyan-blue) !important;
+        }
+
+        .has-vivid-purple-border-color {
+            border-color: var(--wp--preset--color--vivid-purple) !important;
+        }
+
+        .has-vivid-cyan-blue-to-vivid-purple-gradient-background {
+            background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;
+        }
+
+        .has-light-green-cyan-to-vivid-green-cyan-gradient-background {
+            background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;
+        }
+
+        .has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;
+        }
+
+        .has-luminous-vivid-orange-to-vivid-red-gradient-background {
+            background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;
+        }
+
+        .has-very-light-gray-to-cyan-bluish-gray-gradient-background {
+            background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;
+        }
+
+        .has-cool-to-warm-spectrum-gradient-background {
+            background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;
+        }
+
+        .has-blush-light-purple-gradient-background {
+            background: var(--wp--preset--gradient--blush-light-purple) !important;
+        }
+
+        .has-blush-bordeaux-gradient-background {
+            background: var(--wp--preset--gradient--blush-bordeaux) !important;
+        }
+
+        .has-luminous-dusk-gradient-background {
+            background: var(--wp--preset--gradient--luminous-dusk) !important;
+        }
+
+        .has-pale-ocean-gradient-background {
+            background: var(--wp--preset--gradient--pale-ocean) !important;
+        }
+
+        .has-electric-grass-gradient-background {
+            background: var(--wp--preset--gradient--electric-grass) !important;
+        }
+
+        .has-midnight-gradient-background {
+            background: var(--wp--preset--gradient--midnight) !important;
+        }
+
+        .has-small-font-size {
+            font-size: var(--wp--preset--font-size--small) !important;
+        }
+
+        .has-medium-font-size {
+            font-size: var(--wp--preset--font-size--medium) !important;
+        }
+
+        .has-large-font-size {
+            font-size: var(--wp--preset--font-size--large) !important;
+        }
+
+        .has-x-large-font-size {
+            font-size: var(--wp--preset--font-size--x-large) !important;
+        }
+    </style>
+    <link rel='stylesheet' id='booked-icons-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/css/icons.css?ver=2.3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/tooltipster/css/tooltipster.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-tooltipster-theme-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/tooltipster/css/themes/tooltipster-light.css?ver=3.3.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-animations-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/css/animations.css?ver=2.3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-css-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/dist/booked.css?ver=2.3.5' type='text/css' media='all' />
+    <link rel='stylesheet' id='contact-form-7-css' href='https://www.luxenails.co.ke/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.6.4' type='text/css' media='all' />
+    <link rel='stylesheet' id='esg-plugin-settings-css' href='https://www.luxenails.co.ke/wp-content/plugins/essential-grid/public/assets/css/settings.css?ver=3.0.13' type='text/css' media='all' />
+    <link rel='stylesheet' id='tp-fontello-css' href='https://www.luxenails.co.ke/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.13' type='text/css' media='all' />
+    <link rel='stylesheet' id='social-widget-css' href='https://www.luxenails.co.ke/wp-content/plugins/social-media-widget/social_widget.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='trx_socials-icons-css' href='https://www.luxenails.co.ke/wp-content/plugins/trx_socials/assets/css/font_icons/css/trx_socials_icons.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='trx_socials-widget_instagram-css' href='https://www.luxenails.co.ke/wp-content/plugins/trx_socials/widgets/instagram/instagram.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce-layout-css' href='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/css/woocommerce-layout.css?ver=6.6.1' type='text/css' media='all' />
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=6.6.1' type='text/css' media='only screen and (max-width: 768px)' />
+    <link rel='stylesheet' id='woocommerce-general-css' href='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=6.6.1' type='text/css' media='all' />
+    <style id='woocommerce-inline-inline-css' type='text/css'>
+        .woocommerce form .form-row .required {
+            visibility: visible;
+        }
+    </style>
+    <link rel='stylesheet' id='parent-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/style.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-font-google-fonts-style-css' href='//fonts.googleapis.com/css?family=Montserrat:300,300italic,400,400italic,700,700italic|Open+Sans+Condensed:700|Playfair+Display&#038;subset=latin,latin-ext' type='text/css' media='all'
+    />
+    <link rel='stylesheet' id='fontello-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/css/fontello/css/fontello.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-main-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar-child/style.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-animation-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/css/core.animation.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-shortcodes-style-css' href='https://www.luxenails.co.ke/wp-content/plugins/trx_utils/shortcodes/theme.shortcodes.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-plugin-booked-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/css/plugin.booked.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-skin-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/skins/less/skin.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-custom-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/css/custom-style.css' type='text/css' media='all' />
+    <style id='nailsbar-custom-style-inline-css' type='text/css'>
+        .sidebar_outer_logo .logo_main,
+        .top_panel_wrap .logo_main,
+        .top_panel_wrap .logo_fixed {
+            height: 33px
+        }
+
+        .contacts_wrap .logo img {
+            height: 30px
+        }
+    </style>
+    <link rel='stylesheet' id='nailsbar-responsive-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/css/responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='nailsbar-theme-skin-responsive-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/skins/less/skin.responsive.css' type='text/css' media='all' />
+    <link rel='stylesheet' id='mediaelement-css' href='https://www.luxenails.co.ke/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all' />
+    <link rel='stylesheet' id='wp-mediaelement-css' href='https://www.luxenails.co.ke/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='zoom-instagram-widget-css' href='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/styles/frontend/index.css?ver=2.0.2' type='text/css' media='all' />
+    <link rel='stylesheet' id='booked-wc-fe-styles-css' href='https://www.luxenails.co.ke/wp-content/plugins/booked/includes/add-ons/woocommerce-payments//css/frontend-style.css?ver=6.0.3' type='text/css' media='all' />
+    <link rel='stylesheet' id='joinchat-css' href='https://www.luxenails.co.ke/wp-content/plugins/creame-whatsapp-me/public/css/joinchat.min.css?ver=4.5.7' type='text/css' media='all' />
+    <style id='joinchat-inline-css' type='text/css'>
+        .joinchat {
+            --red: 37;
+            --green: 211;
+            --blue: 102;
+        }
+    </style>
+    <link rel='stylesheet' id='js_composer_front-css' href='https://www.luxenails.co.ke/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.2.0' type='text/css' media='all' />
+    <link rel='stylesheet' id='font-awesome-css' href='https://www.luxenails.co.ke/wp-content/plugins/popup-anything-on-click/assets/css/font-awesome.min.css?ver=2.1.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='popupaoc-public-style-css' href='https://www.luxenails.co.ke/wp-content/plugins/popup-anything-on-click/assets/css/popupaoc-public.css?ver=2.1.6' type='text/css' media='all' />
+    <link rel='stylesheet' id='wpgdprc-front-css-css' href='https://www.luxenails.co.ke/wp-content/plugins/wp-gdpr-compliance/Assets/css/front.css?ver=1656438285' type='text/css' media='all' />
+    <style id='wpgdprc-front-css-inline-css' type='text/css'>
+        :root {
+            --wp-gdpr--bar--background-color: #000000;
+            --wp-gdpr--bar--color: #ffffff;
+            --wp-gdpr--button--background-color: #000000;
+            --wp-gdpr--button--background-color--darken: #000000;
+            --wp-gdpr--button--color: #ffffff;
+        }
+    </style>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/underscore.min.js?ver=1.13.3' id='underscore-js'></script>
+    <script type='text/javascript' id='wp-util-js-extra'>
+        /* <![CDATA[ */
+        var _wpUtilSettings = {
+            "ajax": {
+                "url": "\/wp-admin\/admin-ajax.php"
+            }
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/wp-util.min.js?ver=6.0.3' id='wp-util-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/scripts/library/magnific-popup.js?ver=1656438322' id='magnific-popup-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/scripts/library/swiper.js?ver=7.0.0-alpha.21' id='swiper-js-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/scripts/frontend/block.js?ver=2314fc3e629d10b094fb05397afc5923' id='wpz-insta_block-frontend-script-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.12' defer async id='tp-tools-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.12' defer async id='revmin-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.6.1' id='jquery-blockui-js'></script>
+    <script type='text/javascript' id='wc-add-to-cart-js-extra'>
+        /* <![CDATA[ */
+        var wc_add_to_cart_params = {
+            "ajax_url": "\/wp-admin\/admin-ajax.php",
+            "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+            "i18n_view_cart": "View cart",
+            "cart_url": "https:\/\/www.luxenails.co.ke\/cart\/",
+            "is_cart": "",
+            "cart_redirect_after_add": "no"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=6.6.1' id='wc-add-to-cart-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.2.0' id='vc_woocommerce-add-to-cart-js-js'></script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/photostack/modernizr.min.js' id='modernizr-js'></script>
+    <script type='text/javascript' id='booked-wc-fe-functions-js-extra'>
+        /* <![CDATA[ */
+        var booked_wc_variables = {
+            "prefix": "booked_wc_",
+            "ajaxurl": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+            "i18n_confirm_appt_edit": "Are you sure you want to change the appointment date? By doing so, the appointment date will need to be approved again.",
+            "i18n_pay": "Are you sure you want to add the appointment to cart and go to checkout?",
+            "i18n_mark_paid": "Are you sure you want to mark this appointment as \"Paid\"?",
+            "i18n_paid": "Paid",
+            "i18n_awaiting_payment": "Awaiting Payment",
+            "checkout_page": "https:\/\/www.luxenails.co.ke\/checkout\/"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/includes/add-ons/woocommerce-payments//js/frontend-functions.js?ver=6.0.3' id='booked-wc-fe-functions-js'></script>
+    <script type='text/javascript' id='wpgdprc-front-js-js-extra'>
+        /* <![CDATA[ */
+        var wpgdprcFront = {
+            "ajaxUrl": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+            "ajaxNonce": "223481300f",
+            "ajaxArg": "security",
+            "pluginPrefix": "wpgdprc",
+            "blogId": "1",
+            "isMultiSite": "",
+            "locale": "en_US",
+            "showSignUpModal": "",
+            "showFormModal": "",
+            "cookieName": "wpgdprc-consent",
+            "consentVersion": "",
+            "path": "\/",
+            "prefix": "wpgdprc"
+        };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/wp-gdpr-compliance/Assets/js/front.min.js?ver=1656438285' id='wpgdprc-front-js-js'></script>
+    <link rel="https://api.w.org/" href="https://www.luxenails.co.ke/wp-json/" />
+    <link rel="alternate" type="application/json" href="https://www.luxenails.co.ke/wp-json/wp/v2/pages/931" />
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.luxenails.co.ke/xmlrpc.php?rsd" />
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.luxenails.co.ke/wp-includes/wlwmanifest.xml" />
+    <meta name="generator" content="WordPress 6.0.3" />
+    <meta name="generator" content="WooCommerce 6.6.1" />
+    <link rel='shortlink' href='https://www.luxenails.co.ke/' />
+    <link rel="alternate" type="application/json+oembed" href="https://www.luxenails.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.luxenails.co.ke%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.luxenails.co.ke/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.luxenails.co.ke%2F&#038;format=xml" />
+    <meta name="keywords" content="Russian manicure,dry manicure, luxe,Acrylic nails,powder nails,sns,gel × kenya,stickons, lux, luxe, nails kenya, nails, nails nairobi, nail salon, pedicure, manicure, beautiful nails, manicure pedicure, beauty nails, best nails, manicure and pedicure, overlays in cbd, overlays in kenya, what is nail overlay, best overlay in kenya, best overlay in nairobi, highly rated nail salon, highly rated salon kenya, highly rated nails in kenya, best rated nail salon in kenya, best rated salon in kenya, salon to visit in nairobi, homely salon in kenya, homely nail salon cbd, homely nail salon nairobi, nailspa in kenya, nailspa nairobi, Acrylic nails in kenya, best acrylics nairobi, high end salons in kenya, must visit salon in kenya, must visit salon in nairobi, cleanest salon in kenya, elite nail salons in kenya, elite salons in nairobi, salon with best reviews in nairobi, nail salon with best reviews in kenya, salon in cbd, gents pedicure, gents manicure, nail prices in kenya, nail prices in nairobi, must visit salon in nairobi, must visit salon in nairobi, paraffin wax pedicure in kenya, paraffin wax pedicure in nairobi, best gent pedicure in nairobi, best gent pedicure in kenya, nail salon business in kenya, nail salon business in nairobi, spas in nairobi, overlay nails, toenails, best nail salon, manicure nails, nails and beauty, at nails, good nail salons, nail parlour, nail parlour in kenya, nail parlour in nairobi, nail salons cbd, manicure cbd, clean salon cbd, best salon cbd, best nails cbd, best nail parlour in town, best nail parlour cbd, good nails, pedicure nails, best pedicure, nail parlor, pedi and nails, cheap pedicure, best manicure, the nail parlour, manicure salon, the best nail salon, best nail salon in kenya, best nails kenya, best nails nairobi, best pedicures nairobi, best pedicures in kenya, best manicures in kenya, mini pedicure, pedi nails, simple manicure, mani pedicure, hand manicure, my nails salon, salon nail polish, perfect manicure, the nail parlour price, nail voucher, manicure voucher, pedicure voucher nairobi, pedicure voucher in kenya, manicure voucher in kenya, manicure voucher in nairobi, professional manicure, nail salon pedicure, nails and pedicure, great nail salons, great nail salons kenya, great nail salon nairobi, manicure treatment, nail salon nails, kenya pedicure, nail art pedicure, easy manicure, mani and pedicure, nail parlour price, toenails pedicure, nails prices, pedicure in parlour, good pedicure, manicure pedicure salon, manicure step, the nails salon, the best pedicure, nail salon manicure, good manicure, manicure n pedicure, manicure and pedicure salon, best manicure for your nails, best nail manicure, get manicure, nail and pedicure salon, perfect mani, manicure nail salon, best manicure to get, salon and nails, nail extensions kenya, nail extensions nairobi, fingernail extensions, pedicure professional, get nails salon, pedicure cuticle, nail parlour, nail parlour nairobi, manicure in parlour, get pedicure, doing manicure, manicure pedicure, nails manicure pedicure, the perfect nail, pedicure and nails, beauty parlour manicure, manicure and pedicure, i need a manicure, i need a pedicure, where do i get a pedicure, the best nail salon in the world, best nail salon in kenya, nails manicure and pedicure, clean pedicure, clean pedicure kenya, clean pedicure nairobi, nail salon nairobi, nail salon kenya, nail moi avenue, manicure care, nail salon foot scrub, nail polish pedicure, the perfect manicure, pedi salon, clean nail salon, nail mani, healthy pedicure, a good nail salon, parlour manicure pedicure, simple nail manicure, manicure beauty, nail care manicure, nails and manicure, Nails Bihi, Luxe, Men's Pedicures, Gents Pedicures, Luxe Nails">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172438846-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-172438846-1');
+    </script>
+    <script>
+        document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+    <style>
+        .no-js img.lazyload {
+            display: none;
+        }
+
+        figure.wp-block-image img.lazyloading {
+            min-width: 150px;
+        }
+
+        .lazyload,
+        .lazyloading {
+            opacity: 0;
+        }
+
+        .lazyloaded {
+            opacity: 1;
+            transition: opacity 400ms;
+            transition-delay: 0ms;
+        }
+    </style>
+    <noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+
+
+    <script type="application/ld+json" class="saswp-schema-markup-output">
+        [{
+                "@context": "https://schema.org",
+                "@graph": [{
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Home",
+                        "url": "https://www.luxenails.co.ke/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "About us",
+                        "url": "https://www.luxenails.co.ke/about-us/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Services",
+                        "url": "https://www.luxenails.co.ke/services2/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Application Affair",
+                        "url": "https://www.luxenails.co.ke/services/application-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Manicure Affair",
+                        "url": "https://www.luxenails.co.ke/services/manicure-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Pedicure Affair",
+                        "url": "https://www.luxenails.co.ke/services/pedicure-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Overlays Affair",
+                        "url": "https://www.luxenails.co.ke/services/overlays-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Nail Extension Affair",
+                        "url": "https://www.luxenails.co.ke/services/nail-extension-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Infills Affair",
+                        "url": "https://www.luxenails.co.ke/services/infills-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Soak Off Affair",
+                        "url": "https://www.luxenails.co.ke/services/soak-off/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Nail Art Affair",
+                        "url": "https://www.luxenails.co.ke/services/nail-art-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Nail Repair Affair",
+                        "url": "https://www.luxenails.co.ke/services/nail-repair-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Gents Affair",
+                        "url": "https://www.luxenails.co.ke/services/gents-affair/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Our Prices",
+                        "url": "https://www.luxenails.co.ke/prices/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Gift Voucher",
+                        "url": "https://www.luxenails.co.ke/product/gift-card/"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "FAQs",
+                        "url": "https://luxenails.co.ke/faqs"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Shop",
+                        "url": "https://www.luxenails.co.ke/shop"
+                    },
+                    {
+                        "@context": "https://schema.org",
+                        "@type": "SiteNavigationElement",
+                        "@id": "https://www.luxenails.co.ke/#Main Menu",
+                        "name": "Contacts",
+                        "url": "https://www.luxenails.co.ke/contacts/"
+                    }
+                ]
+            },
+
+            {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "@id": "https://www.luxenails.co.ke#website",
+                "headline": "Luxe Nails Parlour",
+                "name": "Luxe Nails Parlour",
+                "description": "Luxe Nails Parlour looks to deliver state-of-the-art nail care services to those with a true appreciation of self care.",
+                "url": "https://www.luxenails.co.ke",
+                "potentialAction": {
+                    "@type": "SearchAction",
+                    "target": "https://www.luxenails.co.ke/?s={search_term_string}",
+                    "query-input": "required name=search_term_string"
+                }
+            },
+
+            {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "@id": "https://www.luxenails.co.ke/#service"
+            },
+
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "@id": "https://www.luxenails.co.ke#Organization",
+                "name": "Luxe Nails Parlour",
+                "url": "https://www.luxenails.co.ke",
+                "sameAs": []
+            }
+        ]
+    </script>
+
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress." />
+    <meta name="generator" content="Powered by Slider Revolution 6.5.12 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+    <link rel="icon" href="cassienation%20logo.jpg" sizes="32x32" />
+    <link rel="icon" href="cassienation%20logo.jpg" sizes="192x192" />
+    <link rel="apple-touch-icon" href="https://www.luxenails.co.ke/wp-content/uploads/2020/01/cropped-Peach_on_White-1-180x180.png" />
+    <meta name="msapplication-TileImage" content="cassienation logo.jpg" />
+    <script>
+        function setREVStartSize(e) {
+            //window.requestAnimationFrame(function() {
+            window.RSIW = window.RSIW === undefined ? window.innerWidth : window.RSIW;
+            window.RSIH = window.RSIH === undefined ? window.innerHeight : window.RSIH;
+            try {
+                var pw = document.getElementById(e.c).parentNode.offsetWidth,
+                    newh;
+                pw = pw === 0 || isNaN(pw) ? window.RSIW : pw;
+                e.tabw = e.tabw === undefined ? 0 : parseInt(e.tabw);
+                e.thumbw = e.thumbw === undefined ? 0 : parseInt(e.thumbw);
+                e.tabh = e.tabh === undefined ? 0 : parseInt(e.tabh);
+                e.thumbh = e.thumbh === undefined ? 0 : parseInt(e.thumbh);
+                e.tabhide = e.tabhide === undefined ? 0 : parseInt(e.tabhide);
+                e.thumbhide = e.thumbhide === undefined ? 0 : parseInt(e.thumbhide);
+                e.mh = e.mh === undefined || e.mh == "" || e.mh === "auto" ? 0 : parseInt(e.mh, 0);
+                if (e.layout === "fullscreen" || e.l === "fullscreen")
+                    newh = Math.max(e.mh, window.RSIH);
+                else {
+                    e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+                    for (var i in e.rl)
+                        if (e.gw[i] === undefined || e.gw[i] === 0) e.gw[i] = e.gw[i - 1];
+                    e.gh = e.el === undefined || e.el === "" || (Array.isArray(e.el) && e.el.length == 0) ? e.gh : e.el;
+                    e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+                    for (var i in e.rl)
+                        if (e.gh[i] === undefined || e.gh[i] === 0) e.gh[i] = e.gh[i - 1];
+
+                    var nl = new Array(e.rl.length),
+                        ix = 0,
+                        sl;
+                    e.tabw = e.tabhide >= pw ? 0 : e.tabw;
+                    e.thumbw = e.thumbhide >= pw ? 0 : e.thumbw;
+                    e.tabh = e.tabhide >= pw ? 0 : e.tabh;
+                    e.thumbh = e.thumbhide >= pw ? 0 : e.thumbh;
+                    for (var i in e.rl) nl[i] = e.rl[i] < window.RSIW ? 0 : e.rl[i];
+                    sl = nl[0];
+                    for (var i in nl)
+                        if (sl > nl[i] && nl[i] > 0) {
+                            sl = nl[i];
+                            ix = i;
+                        }
+                    var m = pw > (e.gw[ix] + e.tabw + e.thumbw) ? 1 : (pw - (e.tabw + e.thumbw)) / (e.gw[ix]);
+                    newh = (e.gh[ix] * m) + (e.tabh + e.thumbh);
+                }
+                var el = document.getElementById(e.c);
+                if (el !== null && el) el.style.height = newh + "px";
+                el = document.getElementById(e.c + "_wrapper");
+                if (el !== null && el) {
+                    el.style.height = newh + "px";
+                    el.style.display = "block";
+                }
+            } catch (e) {
+                console.log("Failure at Presize of Slider:" + e)
+            }
+            //});
+        };
+    </script>
+    <style type="text/css" id="wp-custom-css">
+        @media screen and (max-width: 497px) {
+            #voucher-reasons {
+                margin-top: 70px;
+            }
+            .sc_title.sc_title_regular.sc_align_center {
+                margin-top: 0.4em !important;
+            }
+            form.mc4wp-form label.mcfwp-agree-input span {
+                line-height: 12px;
+            }
+            #quick_view_list,
+            #detailed_view_list {
+                margin-left: 15px;
+                width: 90%;
+                margin-bottom: 20px
+            }
+            .sc_column_item_inner {
+                background-position: center;
+            }
+        }
+
+        .menu_main_cart.top_panel_icon {
+            display: none;
+        }
+
+        .vc_column-inner.vc_custom_1580303796467 .sc_call_to_action_descr.sc_item_descr {
+            color: white;
+        }
+
+        .vc_column-inner.vc_custom_1580303796467 .sc_call_to_action_title.sc_item_title {
+            color: white;
+        }
+
+        .vc_column-inner.vc_custom_1580306588611 {
+            background: transparent !important;
+        }
+
+        .vc_column-inner.vc_custom_1580306588611 .sc_call_to_action_title.sc_item_title {
+            color: white;
+        }
+
+        .vc_column-inner.vc_custom_1580306588611 .sc_call_to_action_descr.sc_item_descr {
+            color: white;
+        }
+
+        .vc_column-inner.vc_custom_1580303796467 {
+            background: transparent !important;
+        }
+
+        #detailed_view_list {
+            border-radius: 20px;
+            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.luxenails.co.ke/wp-content/uploads/2019/11/Slide3-copy.jpg');
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-right: 10px;
+        }
+
+        #quick_view_list {
+            border-radius: 20px;
+            background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://www.luxenails.co.ke/wp-content/uploads/revslider/home-2/home1_slide4.jpg);
+            background-size: cover;
+            margin-right: 20px;
+        }
+
+        ..post_item.post_item_single.post_featured_center.post_format_standard.post-1417.page.type-page.status-publish.hentry {
+            background: url("https://www.luxenails.co.ke/wp-content/uploads/2020/01/Lnp-bg-e1580148781521.png");
+            background-size: cover;
+            width: 110vw;
+            margin-left: -15vw
+        }
+
+        .scheme_original .single-product div.product .woocommerce-tabs.trx-stretch-width .panel {
+            background: white;
+            border-left: solid 1px wheat;
+            border-right: solid 1px wheat;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        .scheme_original .top_panel_wrap .contact_label {
+            background: white;
+            font-size: 1.4em;
+            margin-top: -22px;
+        }
+
+        .scheme_original .top_panel_wrap .contact_label:hover {
+            color: white;
+            background: lightgrey;
+        }
+
+        .scheme_original .sc_socials.sc_socials_type_icons a {
+            font-size: 2em
+        }
+
+        .scheme_original .top_panel_wrap .contact_label:before {
+            color: black;
+        }
+
+        .sc_socials.sc_socials_size_tiny {
+            margin-right: -4em;
+        }
+
+        .sidebar_outer_logo .logo_main,
+        .top_panel_wrap .logo_main,
+        .top_panel_wrap .logo_fixed {
+            height: 50px
+        }
+
+        .scheme_original .top_panel_middle .contact_field,
+        .scheme_original .top_panel_middle .contact_field a[href*="tel:"],
+        .scheme_original .top_panel_middle .contact_field>a {
+            margin-top: -2px;
+        }
+
+        .product_meta {
+            display: none;
+        }
+
+        #tab-title-reviews {
+            display: none;
+        }
+
+        .scheme_original .single-product div.product .woocommerce-tabs.trx-stretch-width .wc-tabs li:hover,
+        .scheme_original .single-product div.product .woocommerce-tabs.trx-stretch-width .wc-tabs li.active {
+            display: none;
+        }
+
+        .woocommerce div.product .woocommerce-tabs h2,
+        .woocommerce #content div.product .woocommerce-tabs h2,
+        .woocommerce-page div.product .woocommerce-tabs h2,
+        .woocommerce-page #content div.product .woocommerce-tabs h2 {
+            display: none;
+        }
+
+        .woocommerce div.product .product_title {
+            font-weight: 700;
+        }
+
+        .scheme_original .woocommerce div.product div.images,
+        .scheme_original .woocommerce #content div.product div.images,
+        .scheme_original .woocommerce-page div.product div.images,
+        .scheme_original .woocommerce-page #content div.product div.images {
+            border: solid 1px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 20px 2px lightgrey;
+        }
+
+        .woocommerce div.product div.images .woocommerce-product-gallery__wrapper .woocommerce-product-gallery__image:first-child {
+            border-radius: 10px;
+        }
+
+        .woocommerce div.product .product_title {
+            margin-top: 0;
+        }
+
+        .sc_column_item_inner {
+            background-size: cover;
+            background-color: white;
+            background-repeat: no-repeat;
+        }
+
+        .page-id-1353 .sc_section_content_wrap {
+            display: flex;
+        }
+
+        .page-id-1353 .scheme_original input[type="submit"],
+        .scheme_original input[type="reset"],
+        .scheme_original input[type="button"],
+        .scheme_original button,
+        .scheme_original .sc_button.sc_button_style_filled {
+            padding: 3px;
+        }
+
+        .page-id-1353 .sc_section_content_wrap {
+            display: flex;
+            align-content: center;
+            justify-content: space-evenly;
+        }
+
+        #about-us-button {
+            margin-top: 27em !important;
+            background-color: #fccba6 !important;
+            padding: 2px
+        }
+
+        #about-us-button:hover {
+            color: white !important;
+        }
+
+        .home .page-id-931 .scheme_original input[type="submit"],
+        .scheme_original input[type="reset"],
+        .scheme_original input[type="button"],
+        .scheme_original button,
+        .scheme_original .sc_button.sc_button_style_filled {
+            padding: 10px;
+        }
+
+        .scheme_original h1,
+        .scheme_original h2,
+        .scheme_original h3,
+        .scheme_original h4,
+        .scheme_original h5,
+        .scheme_original h6,
+        .scheme_original h1 a,
+        .scheme_original h2 a,
+        .scheme_original h3 a,
+        .scheme_original h4 a,
+        .scheme_original h5 a,
+        .scheme_original h6 a {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .sc_column_item_inner {
+            margin-top: 3em;
+        }
+
+        .post_featured img {
+            height: 250px;
+        }
+
+        #infills-affair .sc_services_item_content {
+            margin-top: -60px
+        }
+
+        #application-affair .sc_services_item_title {
+            font-size: 1.9em;
+        }
+
+        #nail-application-affair img {
+            height: 230px !important;
+        }
+
+        .sc_services_style_services-1.sc_services_type_images .sc_services_item_title {
+            margin-top: 0px;
+            height: 110px;
+            padding-top: 0.5em;
+            line-height: 1.1em;
+        }
+
+        .wp-post-image {
+            height: auto !important;
+        }
+
+        .comments_wrap {
+            display: none;
+        }
+
+        .woocommerce-tabs.wc-tabs-wrapper.trx-stretch-width.scheme_light.inited {
+            top: -70px;
+        }
+
+        .page_content_wrap {
+            padding: 2.7em 0 4.55em;
+        }
+
+        .vc_row.wpb_row.vc_row-fluid.vc_custom_1457787077542 {
+            margin-top: -55px
+        }
+
+        ..post_item.post_item_single.post_featured_center.post_format_standard.post-1362.page.type-page.status-publish.hentry {
+            margin-top: -60px;
+        }
+
+        .post_info {
+            display: none;
+        }
+
+        .page-id-2012 .wp-block-buttons,
+        .page-id-2159 .wp-block-buttons {
+            text-align: center;
+        }
+
+        .page-id-2012 .wp-block-buttons a,
+        .page-id-2159 .wp-block-buttons a {
+            font-size: 15px;
+        }
+
+        .page-id-2012 .wp-block-buttons a,
+        .page-id-2012 .wp-block-buttons a code,
+        .page-id-2159 .wp-block-buttons a {
+            border-color: black;
+            color: black;
+            font-family: 'Playfair Display';
+        }
+
+        .page-id-2012 .wp-block-buttons a:hover,
+        .page-id-2012 .wp-block-buttons a code:hover,
+        .page-id-2159 .wp-block-buttons a:hover {
+            border-color: #fccba6;
+            color: #fccba6;
+        }
+    </style>
+    <style type="text/css" data-type="vc_shortcodes-custom-css">
+        .vc_custom_1581325436931 {
+            margin-top: 0px !important;
+            border-top-width: 0px !important;
+            padding-top: 0px !important;
+            background-image: url(https://www.luxenails.co.ke/wp-content/uploads/2020/01/infills2.jpg?id=2142) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1458041228809 {
+            background-image: url(https://nailsbar.ancorathemes.com/wp-content/uploads/2016/03/bg_noise.jpg?id=1478) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1457688937961 {
+            background-image: url(https://nailsbar.ancorathemes.com/wp-content/uploads/2016/03/Rectangle-9-copy-61.jpg?id=1131) !important;
+            background-position: center !important;
+            background-repeat: no-repeat !important;
+            background-size: cover !important;
+        }
+
+        .vc_custom_1457704738668 {
+            margin-top: 20px !important;
+        }
+
+        .vc_custom_1596890824861 {
+            padding-right: 30px !important;
+        }
+    </style><noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
+
+<body data-rsssl=1 class="home page-template-default page page-id-931 page-parent theme-nailsbar woocommerce-no-js nailsbar_body body_style_wide body_filled theme_skin_less article_style_stretch layout_single-standard template_single-standard scheme_original top_panel_show top_panel_above sidebar_hide sidebar_outer_hide wpb-js-composer js-comp-ver-6.2.0 vc_responsive">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0.49803921568627" /><feFuncG type="table" tableValues="0 0.49803921568627" /><feFuncB type="table" tableValues="0 0.49803921568627" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+    <svg
+        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+        <defs>
+            <filter id="wp-duotone-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 1" />
+                    <feFuncG type="table" tableValues="0 1" />
+                    <feFuncB type="table" tableValues="0 1" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+        </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.54901960784314 0.98823529411765" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.71764705882353 0.25490196078431" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+        <svg
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+            <defs>
+                <filter id="wp-duotone-blue-red">
+                    <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                    <feComponentTransfer color-interpolation-filters="sRGB">
+                        <feFuncR type="table" tableValues="0 1" />
+                        <feFuncG type="table" tableValues="0 0.27843137254902" />
+                        <feFuncB type="table" tableValues="0.5921568627451 0.27843137254902" />
+                        <feFuncA type="table" tableValues="1 1" />
+                    </feComponentTransfer>
+                    <feComposite in2="SourceGraphic" operator="in" />
+                </filter>
+            </defs>
+            </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0 0" /><feFuncG type="table" tableValues="0 0.64705882352941" /><feFuncB type="table" tableValues="0 1" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+            <svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+                <defs>
+                    <filter id="wp-duotone-magenta-yellow">
+                        <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                        <feComponentTransfer color-interpolation-filters="sRGB">
+                            <feFuncR type="table" tableValues="0.78039215686275 1" />
+                            <feFuncG type="table" tableValues="0 0.94901960784314" />
+                            <feFuncB type="table" tableValues="0.35294117647059 0.47058823529412" />
+                            <feFuncA type="table" tableValues="1 1" />
+                        </feComponentTransfer>
+                        <feComposite in2="SourceGraphic" operator="in" />
+                    </filter>
+                </defs>
+                </svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " /><feComponentTransfer color-interpolation-filters="sRGB" ><feFuncR type="table" tableValues="0.65098039215686 0.40392156862745" /><feFuncG type="table" tableValues="0 1" /><feFuncB type="table" tableValues="0.44705882352941 0.4" /><feFuncA type="table" tableValues="1 1" /></feComponentTransfer><feComposite in2="SourceGraphic" operator="in" /></filter></defs></svg>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;">
+                    <defs>
+                        <filter id="wp-duotone-blue-orange">
+                            <feColorMatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                            <feComponentTransfer color-interpolation-filters="sRGB">
+                                <feFuncR type="table" tableValues="0.098039215686275 1" />
+                                <feFuncG type="table" tableValues="0 0.66274509803922" />
+                                <feFuncB type="table" tableValues="0.84705882352941 0.41960784313725" />
+                                <feFuncA type="table" tableValues="1 1" />
+                            </feComponentTransfer>
+                            <feComposite in2="SourceGraphic" operator="in" />
+                        </filter>
+                    </defs>
+                    </svg>
+                    <a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-url="https://www.luxenails.co.ke/" data-separator="yes"></a>
+                    <a
+                        id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+
+
+
+                        <div class="body_wrap">
+
+
+                            <div class="page_wrap">
+
+
+                                <div class="top_panel_fixed_wrap"></div>
+
+                                <header class="top_panel_wrap top_panel_style_1 scheme_original">
+                                    <div class="top_panel_wrap_inner top_panel_inner_style_1 top_panel_position_above">
+                                        <div class="top_panel_middle">
+                                            <div class="content_wrap">
+                                                <div class="columns_wrap columns_fluid">
+                                                    <div class="column-1_3 contact_logo">
+                                                        <div class="logo">
+                                                            <img   alt="Cassienation LOGO" width="238" height="80" data-src="cassienation logo.jpg" class="logo_main lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img   alt="Cassienation LOGO" width="238" height="80" data-src="cassienation logo.jpg" class="logo_main lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="cassienation%20logo.jpg" class="logo_main" alt="Cassienation LOGO" width="238" height="80"></noscript></noscript></a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="column-2_3 contact_field contact_phone">
+                                                        <div class="contact_label contact_phone icon-phone"><a href="tel:+254 728 638 614">+254 728 638 614</a></div>
+
+
+
+                                                        <div class="top_panel_top_user_area">
+                                                            <div class="top_panel_top_socials">
+                                                                <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_tiny">
+                                                                    <div class="sc_socials_item"><a href="https://www.facebook.com/luxenailsparlour/" target="_blank" class="social_icons social_"><span class="icon-"></span></a></div>
+                                                                    <div class="sc_socials_item"><a href="https://instagram.com/cassie_nation254?igshid=NDk5N2NlZjQ=" target="_blank" class="social_icons social_"><span class="icon-"></span></a></div>
+                                                                </div>
+                                                            </div>
+                                                            <ul class="menu_user_nav">
+
+                                                            </ul>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="top_panel_bottom">
+                                            <div class="content_wrap clearfix">
+                                                <nav class="menu_main_nav_area">
+                                                    <ul id="menu_main" class="menu_main_nav">
+                                                        <li id="menu-item-1988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-931 current_page_item menu-item-1988"> aria-current="page">Home</a></li>
+                                                        <li id="menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356">About us</a></li>
+                                                        <li id="menu-item-1996" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1996">Services</a>
+                                                            <ul class="sub-menu">
+                                                                <li id="menu-item-2003" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2003">Application Affair</li>
+                                                                <li id="menu-item-2001" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2001">Manicure Affair</li>
+                                                                <li id="menu-item-2002" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2002">Pedicure Affair</li>
+                                                                <li id="menu-item-2000" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2000">Overlays Affair</li>
+                                                                <li id="menu-item-1999" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1999">Nail Extension Affair</li>
+                                                                <li id="menu-item-2031" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2031">Infills Affair</li>
+                                                                <li id="menu-item-2030" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2030">Soak Off Affair</li>
+                                                                <li id="menu-item-2172" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2172">Nail Art Affair</li>
+                                                                <li id="menu-item-2173" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173">Nail Repair Affair</li>
+                                                                <li id="menu-item-2029" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2029">Gents Affair</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li id="menu-item-2404" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2404">Our Prices</a></li>
+                                                        <li id="menu-item-2016" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2016">Gift Voucher</a></li>
+                                                        <li id="menu-item-5865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5865">Shop</a></li>
+                                                        <li id="menu-item-6107" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6107">Blog</a></li>
+                                                        <li id="menu-item-2017" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2017">FAQs</a></li>
+                                                        <li id="menu-item-993" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-993">Contacts</a></li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </header>
+
+                                <div class="header_mobile">
+                                    <div class="content_wrap">
+                                        <div class="menu_button icon-menu"></div>
+                                        <div class="logo">
+                                            <img   alt="Cassienation LOGO" width="238" height="80" data-src="cassienation logo.jpg" class="logo_main lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img   alt="Cassienation LOGO" width="238" height="80" data-src="cassienation logo.jpg" class="logo_main lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img src="cassienation logo.jpg" class="logo_main" alt="Luxe-Nails-Parlour-Logo.png" width="238" height="80"></noscript></noscript></a>
+                                        </div>
+                                    </div>
+                                    <div class="side_wrap">
+                                        <div class="close">Close</div>
+                                        <div class="panel_top">
+                                            <nav class="menu_main_nav_area">
+                                                <ul id="menu_mobile" class="menu_main_nav">
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-931 current_page_item menu-item-1988">Home</li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356">About us</a></li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1996">Services
+                                                        <ul class="sub-menu">
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2003">Application Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2001">Manicure Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2002">Pedicure Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2000">Overlays Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1999">Nail Extension Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2031">Infills Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2030">Soak Off Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2172">Nail Art Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2173">Nail Repair Affair</li>
+                                                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2029">Gents Affair</li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2404">Our Prices</li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2016">Gift Voucher</li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-5865">Shop</li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6107">Blog</li>
+                                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2017">FAQs</li>
+                                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-993">Contacts</li>
+                                                </ul>
+                                            </nav>
+                                            <div class="search_wrap search_style_regular search_state_fixed">
+                                                <div class="search_form_wrap">
+                                                    <form role="search" method="get" class="search_form" action="https://www.luxenails.co.ke/">
+                                                        <button type="submit" class="search_submit" data-text="Search" title="Start search"></button>
+                                                        <input type="text" class="search_field" placeholder="Search" value="" name="s" />
+                                                    </form>
+                                                </div>
+                                                <div class="search_results widget_area scheme_original"><a class="search_results_close icon-cancel"></a>
+                                                    <div class="search_results_content"></div>
+                                                </div>
+                                            </div>
+                                            <div class="login"><a href="#popup_login" class="popup_link popup_login_link icon-user" title="">Login</a>
+                                                <div id="popup_login" class="popup_wrap popup_login bg_tint_light popup_half">
+                                                    <a href="#" class="popup_close"></a>
+                                                    <div class="form_wrap">
+                                                        <div>
+                                                            <form action="https://www.luxenails.co.ke/wp-login.php" method="post" name="login_form" class="popup_form login_form">
+                                                                <input type="hidden" name="redirect_to" value="https://www.luxenails.co.ke/">
+                                                                <div class="popup_form_field login_field iconed_field icon-user"><input type="text" id="log" name="log" value="" placeholder="Login or Email"></div>
+                                                                <div class="popup_form_field password_field iconed_field icon-lock"><input type="password" id="password" name="pwd" value="" placeholder="Password"></div>
+                                                                <div class="popup_form_field remember_field">
+                                                                    <a href="https://www.luxenails.co.ke/wp-login.php?action=lostpassword&#038;redirect_to=https%3A%2F%2Fwww.luxenails.co.ke%2F" class="forgot_password">Forgot password?</a>
+                                                                    <input type="checkbox" value="forever" id="rememberme" name="rememberme">
+                                                                    <label for="rememberme">Remember me</label>
+                                                                </div>
+                                                                <div class="popup_form_field submit_field"><input type="submit" class="submit_button" value="Login"></div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.login_wrap -->
+                                                </div>
+                                                <!-- /.popup_login -->
+                                            </div>
+                                        </div>
+
+                                        <div class="panel_middle">
+                                            <div class="contact_field contact_address">
+                                                <span class="contact_icon icon-home"></span>
+                                                <span class="contact_label contact_address_1"></span>
+                                                <span class="contact_address_2">Ongata Rongai and Nairobi, Mobile services..</span>
+                                            </div>
+                                            <div class="contact_field contact_phone">
+                                                <span class="contact_icon icon-phone"></span>
+                                                <span class="contact_label contact_phone"><a href="tel:+254 728 638 614">+254 728 638 614</a></span>
+                                                <span class="contact_email"><a href="mailto:h&#101;&#108;lo&#64;&#108;u&#120;&#101;&#110;&#97;i&#108;s&#46;&#99;o&#46;ke">cassienation@gmail.com</a></span>
+                                            </div>
+
+
+                                            <div class="top_panel_top_user_area">
+                                                <ul class="menu_user_nav">
+
+                                                </ul>
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="panel_bottom">
+                                            <div class="contact_socials">
+                                                <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small">
+                                                    <div class="sc_socials_item"><a href="https://www.facebook.com/luxenailsparlour/" target="_blank" class="social_icons social_"><span class="icon-"></span></a></div>
+                                                    <div class="sc_socials_item"><a href="https://instagram.com/cassie_nation254?igshid=NDk5N2NlZjQ=" target="_blank" class="social_icons social_"><span class="icon-"></span></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mask"></div>
+                                </div>
+                                <section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-2">
+
+                                    <!-- START Home 2 REVOLUTION SLIDER 6.5.12 -->
+                                    <p class="rs-p-wp-fix"></p>
+                                    <rs-module-wrap id="rev_slider_2_1_wrapper" data-source="gallery" style="visibility:hidden;background:#111111;padding:0;margin:0px auto;margin-top:0;margin-bottom:0;">
+                                        <rs-module id="rev_slider_2_1" style="" data-version="6.5.12">
+                                            <rs-slides>
+                                                <rs-slide style="position: absolute;" data-key="rs-15" data-title="Laboratory" data-thumb="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-250x250.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
+                                                    <img src="//www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy.jpg" data-parallax="off"
+                                                        data-no-retina>
+                                                    <!---->
+                                                </rs-slide>
+                                                <rs-slide style="position: absolute;" data-key="rs-18" data-title="Laboratory" data-thumb="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-2-250x250.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
+                                                    <img src="//www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-2.jpg" data-parallax="off"
+                                                        data-no-retina>
+                                                    <!---->
+                                                </rs-slide>
+                                                <rs-slide style="position: absolute;" data-key="rs-12" data-title="Laboratory" data-thumb="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-3-250x250.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
+                                                    <img src="//www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-3.jpg" data-parallax="off"
+                                                        data-no-retina>
+                                                    <!---->
+                                                </rs-slide>
+                                                <rs-slide style="position: absolute;" data-key="rs-19" data-title="Laboratory" data-thumb="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-5-250x250.jpg" data-anim="ms:600;" data-in="o:0;" data-out="a:false;">
+                                                    <img src="//www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/assets/dummy.png" alt="" title="Home" class="rev-slidebg tp-rs-img rs-lazyload" data-lazyload="//www.luxenails.co.ke/wp-content/uploads/2019/11/Slide5-copy-5.jpg" data-parallax="off"
+                                                        data-no-retina>
+                                                    <!---->
+                                                </rs-slide>
+                                            </rs-slides>
+                                        </rs-module>
+                                        <script>
+                                            setREVStartSize({
+                                                c: 'rev_slider_2_1',
+                                                rl: [1240, 1024, 778, 480],
+                                                el: [],
+                                                gw: [960],
+                                                gh: [530],
+                                                type: 'standard',
+                                                justify: '',
+                                                layout: 'fullwidth',
+                                                mh: "0"
+                                            });
+                                            if (window.RS_MODULES !== undefined && window.RS_MODULES.modules !== undefined && window.RS_MODULES.modules["revslider21"] !== undefined) {
+                                                window.RS_MODULES.modules["revslider21"].once = false;
+                                                window.revapi2 = undefined;
+                                                if (window.RS_MODULES.checkMinimal !== undefined) window.RS_MODULES.checkMinimal()
+                                            }
+                                        </script>
+                                    </rs-module-wrap>
+                                    <!-- END REVOLUTION SLIDER -->
+                                </section>
+
+                                <div class="page_content_wrap page_paddings_no">
+
+
+                                    <div class="content_wrap">
+                                        <div class="content">
+                                            <article class=" post_item post_item_single post_featured_default post_format_standard post-931 page type-page status-publish hentry">
+                                                <section class="post_content">
+                                                    <div class="vc_row wpb_row vc_row-fluid">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="sc_content content_wrap home1-block2 " style="margin-bottom: 6.7em;margin-top: 2.45em;">
+                                                                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_2">
+                                                                            <div class="column-1_2 sc_column_item sc_column_item_1 odd first">
+                                                                                <div class="sc_section" style="border-top: 2px solid #222222;border-bottom: 2px solid #222222;">
+                                                                                    <div class="sc_section_inner">
+                                                                                        <div class="sc_section_content_wrap">
+                                                                                            <div class="sc_section sc_section_block " style="border-top: 1px solid #222222;margin-top:3px;">
+                                                                                                <div class="sc_section_inner">
+                                                                                                    <div class="sc_section_content_wrap">
+                                                                                                        <h1 class="sc_title sc_title_regular sc_align_center margin_bottom_null" style="margin-top:1.6em;font-size: 2em!important;text-align:center;font-size:3.056em;">Book an<br /> Appointment
+                                                                                                        </h1><a href="https://api.whatsapp.com/send?phone=254728638614&text=Hi%20Cassienation%20Nails%20Parlour.%20I%20want%20to%20enquire%20about%20your%20nail%20care%20services."
+                                                                                                            class="sc_button sc_button_square sc_button_style_filled sc_button_size_medium aligncenter margin_top_tiny margin_bottom_tiny" style="width:200px;">book now</a></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="column-1_2 sc_column_item sc_column_item_2 even">
+                                                                                <div class="sc_section" style="border-top: 2px solid #222222;border-bottom: 2px solid #222222;">
+                                                                                    <div class="sc_section_inner">
+                                                                                        <div class="sc_section_content_wrap">
+                                                                                            <div class="sc_section sc_section_block " style="border-top: 1px solid #222222;margin-top:3px;">
+                                                                                                <div class="sc_section_inner">
+                                                                                                    <div class="sc_section_content_wrap">
+                                                                                                        <h1 class="sc_title sc_title_regular sc_align_center" style="margin-top:1.6em;font-size: 2em!important;text-align:center;font-size:3.056em;">Buy a Gift<br /> Voucher
+                                                                                                        </h1><a href="/product/gift-card/" class="sc_button sc_button_square sc_button_style_filled sc_button_size_medium aligncenter margin_top_tiny margin_bottom_tiny"
+                                                                                                            style="width:200px;">buy</a></div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1581325436931">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="sc_content content_wrap" style="margin-top: 9.6em; margin-bottom: 10.3em;">
+                                                                        <h1 class="sc_title sc_title_regular sc_align_center" style="line-height: 1.1em;text-align:center;font-size:3.889em;"><span style="color: #ffffff;">choose <span style="color: #fdb1aa;">the best</span></span><br />
+                                                                            <span style="color: #ffffff;">attitude</span><br />
+                                                                            <span style="color: #ffffff;">and service</span></h1>
+                                                                        <div class="wpb_text_column wpb_content_element  vc_custom_1457704738668">
+                                                                            <div class="wpb_wrapper">
+                                                                                <p style="text-align: center;"><span style="color: #ffffff;">Making your treatments comfortable and fun</span></p>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <a href="/services2/" class="sc_button sc_button_square sc_button_style_filled sc_button_size_large aligncenter margin_top_large" style="width:320px;">Check Out Our Services</a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_row-full-width"></div>
+                                                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1458041228809">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="sc_content content_wrap home1-block5 " style="margin-top: 5em; margin-bottom: 6.5em;">
+                                                                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3">
+                                                                            <div class="column-2_3 sc_column_item sc_column_item_1 odd first span_2">
+                                                                                <h2 class="sc_title sc_title_regular margin_bottom_null">Why We Are The Best?</h2>
+                                                                                <h6 class="sc_title sc_title_regular" style="margin-top: 0.5em; margin-bottom: 3.5em;"></h6>
+                                                                                <div class="wpb_text_column wpb_content_element  vc_custom_1596890824861">
+                                                                                    <div class="wpb_wrapper">
+                                                                                        <p><span style="color: #000000;">Since 2021, Cassienation Beauty Stop has aimed to perfect the art of nail pampering, manicure and pedicure while building on creativity in nail painting.</span></p>
+                                                                                        <p><span style="color: #000000;">We are a team of young, passionate, talented, creative ,and caring individuals dedicated to doing great nails and giving our clients amazing experiences. We keep evolving to keep up with the latest nail trends and also offer our clients the best nailcare services. When you walk into our doors, every moment of your visit should be enjoyable, relaxed and worthwhile.</span></p>
+                                                                                        <p><span style="color: #000000;">Our customer service rule is that we treat you the way we would love to be treated.</span></p>
+                                                                                        <p><span style="color: #000000;">We maintain unmatched levels of cleanliness and neatness.</span></p>
+                                                                                        <p><span style="color: #000000;">We understand that styles and tastes are unique with every individual and our services have been created carefully to meet every taste and style that comes with every unique customer.</span></p>
+                                                                                        <p><span style="color: #000000;">Rest assured that whatever your TASTE &amp; STYLE may be, we will NAIL IT!</span></p>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                                <a href="/about-us/" class="sc_button sc_button_square sc_button_style_filled sc_button_size_small margin_top_medium">find out more</a></div>
+                                                                            <div class="column-1_3 sc_column_item sc_column_item_3 odd after_span_2">
+                                                                                <div class="sc_column_item_inner" style="background-image:url(https://www.luxenails.co.ke/wp-content/uploads/2020/01/nail_IT.png);background-repeat:no-repeat;background-size:cover;">
+                                                                                    <div class="sc_section">
+                                                                                        <div class="sc_section_inner">
+                                                                                            <div class="sc_section_content_wrap">
+                                                                                                <div class="sc_section sc_section_block " style="margin-top:3px;padding-top: 0.8em;height:320px;height:320px;">
+                                                                                                    <div class="sc_section_inner">
+                                                                                                        <div class="sc_section_content_wrap"></div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_row-full-width"></div>
+                                                    <div class="vc_row wpb_row vc_row-fluid">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <div class="sc_content content_wrap margin_top_huge">
+                                                                        <h2 class="sc_title sc_title_regular sc_align_center" style="text-align:center;">Follow Cassienation Beauty Stop on Instagram</h2>
+                                                                        <div class="wpb_text_column wpb_content_element ">
+                                                                            <div class="wpb_wrapper">
+
+                                                                                <div id="sb_instagram" class="sbi sbi_mob_col_1 sbi_tab_col_2 sbi_col_3 sbi_width_resp" style="padding-bottom: 10px;width: 100%;" data-feedid="sbi_17841400580344584#6" data-res="auto" data-cols="3" data-colsmobile="1" data-colstablet="2" data-num="6"
+                                                                                    data-nummobile="" data-shortcode-atts="{&quot;type&quot;:&quot;luxenailsparlour&quot;,&quot;cachetime&quot;:30}" data-postid="931" data-locatornonce="481f5e9e91" data-sbi-flags="favorLocal">
+
+                                                                                    <div id="sbi_images" style="padding: 5px;">
+                                                                                    </div>
+
+                                                                                    <div id="sbi_load">
+
+
+                                                                                        <span class="sbi_follow_btn">
+        <a href="https://instagram.com/cassie_nation254?igshid=NDk5N2NlZjQ=" target="_blank" rel="nofollow noopener">
+            <svg class="svg-inline--fa fa-instagram fa-w-14" aria-hidden="true" data-fa-processed="" aria-label="Instagram" data-prefix="fab" data-icon="instagram" role="img" viewBox="0 0 448 512">
+	                <path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path>
+	            </svg>            <span>Follow on Instagram</span>
+                                                                                        </a>
+                                                                                        </span>
+
+                                                                                    </div>
+
+                                                                                    <span class="sbi_resized_image_data" data-feed-id="sbi_17841400580344584#6" data-resized="[]">
+	</span>
+                                                                                </div>
+
+
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid vc_custom_1457688937961">
+                                                        <div class="wpb_column vc_column_container vc_col-sm-12">
+                                                            <div class="vc_column-inner">
+                                                                <div class="wpb_wrapper">
+                                                                    <h1 class="sc_title sc_title_regular">
+                                                                        </p>
+                                                                        <h3 style="text-align: center;"><strong>Happy Clients</strong></h3>
+                                                                        <p>
+                                                                    </h1>
+                                                                    <div class="sc_content content_wrap" style="margin-top: 3.5em; margin-bottom: 2.9em;">
+                                                                        <div id="sc_testimonials_1503169265" class="sc_testimonials sc_testimonials_style_testimonials-1 " style="width:100%;">
+                                                                            <div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_controls sc_slider_controls_side" data-interval="7467" data-slides-min-width="250">
+                                                                                <div class="slides swiper-wrapper">
+                                                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">
+                                                                                        <div id="sc_testimonials_1503169265_1" class="sc_testimonial_item">
+                                                                                            <div class="sc_testimonial_content">
+                                                                                                <div class="Jtu6Td"><span class="r-iX7H6aQQogxo" tabindex="0">Friendly staff. Best mani and pedi I've ever had... You'll need to dig deeper for the service, but worth it</span></div>
+                                                                                                <p>&nbsp;</p>
+                                                                                            </div>
+                                                                                            <div class="sc_testimonial_avatar"><img width="83" height="83" alt="Testimonial 5" data-src="njambi.jpg" class="wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img class="wp-post-image" width="83" height="83" alt="Testimonial 5" src="njambi.JPG"></noscript></div>
+                                                                                            <div class="sc_testimonial_author"><span class="sc_testimonial_author_name"> Njambi</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">
+                                                                                        <div id="sc_testimonials_1503169265_2" class="sc_testimonial_item">
+                                                                                            <div class="sc_testimonial_content">
+                                                                                                <p>Wow! Second time a charm! Your service is amazing still even in the midst of busiest of times. Thank you for my Mani-Pedi therapy. I looooove it!</p>
+                                                                                            </div>
+                                                                                            <div class="sc_testimonial_avatar"><img width="83" height="83" alt="Testimonial 6" data-src="cassieb.jpg" class="wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img class="wp-post-image" width="83" height="83" alt="Testimonial 6" src="cassieb.JPG"></noscript></div>
+                                                                                            <div class="sc_testimonial_author"><span class="sc_testimonial_author_name"> Beryl</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">
+                                                                                        <div id="sc_testimonials_1503169265_3" class="sc_testimonial_item">
+                                                                                            <div class="sc_testimonial_content">
+                                                                                                <p>Definite place to go for your nails. High quality, high level of professionalism and fair prices. They cater very well to international clientele.</p>
+                                                                                            </div>
+                                                                                            <div class="sc_testimonial_avatar"><img width="83" height="83" alt="Testimonial 3" data-src="imma.jpg" class="wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img class="wp-post-image" width="83" height="83" alt="Testimonial 3" src="Imma.JPG"></noscript></div>
+                                                                                            <div class="sc_testimonial_author"><span class="sc_testimonial_author_name">Imma</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">
+                                                                                        <div id="sc_testimonials_1503169265_4" class="sc_testimonial_item">
+                                                                                            <div class="sc_testimonial_content">
+                                                                                                <p>Great service, professionalism, wonderful staff and they definitely know their craft.</p>
+                                                                                            </div>
+                                                                                            <div class="sc_testimonial_avatar"><img width="83" height="83" alt="Testimonials 1" data-src="moroi.jpg" class="wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img class="wp-post-image" width="83" height="83" alt="Testimonials 1" src="moroi.JPG"></noscript></div>
+                                                                                            <div class="sc_testimonial_author"><span class="sc_testimonial_author_name">Morori</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="swiper-slide" data-style="width:100%;" style="width:100%;">
+                                                                                        <div id="sc_testimonials_1503169265_5" class="sc_testimonial_item">
+                                                                                            <div class="sc_testimonial_content">
+                                                                                                <p>Great customer service. Good ambience. Might need to call beforehand for a nail appointment though</p>
+                                                                                            </div>
+                                                                                            <div class="sc_testimonial_avatar"><img width="83" height="83" alt="Testimonials 4" data-src="val.jpg" class="wp-post-image lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><noscript><img class="wp-post-image" width="83" height="83" alt="Testimonials 4" src="val.JPG"></noscript></div>
+                                                                                            <div class="sc_testimonial_author"><span class="sc_testimonial_author_name"> Val</span></div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="sc_slider_controls_wrap"><a class="sc_slider_prev" href="#"></a><a class="sc_slider_next" href="#"></a></div>
+                                                                                <div class="sc_slider_pagination_wrap"></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="vc_row-full-width"></div>
+
+                                                </section>
+                                                <!-- </section> class="post_content" > -->
+                                            </article>
+                                            <!-- </article> class=" post_item post_item_single post_featured_default post_format_standard post-931 page type-page status-publish hentry"  > -->
+                                            <section class="related_wrap related_wrap_empty"></section>
+
+                                        </div>
+                                        <!-- </div> class="content"> -->
+                                    </div>
+                                    <!-- </div> class="content_wrap"> -->
+                                </div>
+                                <!-- </.page_content_wrap> -->
+
+                                <footer class="footer_wrap widget_area scheme_original">
+                                    <div class="footer_wrap_inner widget_area_inner">
+                                        <div class="content_wrap">
+                                            <div class="columns_wrap">
+                                                <aside id="nav_menu-2" class="widget_number_1 column-1_4 widget widget_nav_menu">
+                                                    <h5 class="widget_title">OUR SERVICES</h5>
+                                                    <div class="menu-services-container">
+                                                        <ul id="menu-services" class="menu">
+                                                            <li id="menu-item-2060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2060">APPLICATION AFFAIR</li>
+                                                            <li id="menu-item-2061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2061">MANICURE AFFAIR</li>
+                                                            <li id="menu-item-2062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2062">PEDICURE AFFAIR</li>
+                                                            <li id="menu-item-2063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2063">OVERLAYS AFFAIR</li>
+                                                            <li id="menu-item-2064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2064">NAIL EXTENSION AFFAIR</li>
+                                                            <li id="menu-item-2065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2065">INFILLS AFFAIR</li>
+                                                        </ul>
+                                                    </div>
+                                                </aside>
+                                                <aside id="text-2" class="widget_number_2 column-1_4 widget widget_text">
+                                                    <h5 class="widget_title">WORKING HOURS</h5>
+                                                    <div class="textwidget">
+                                                        <div class="ZdM7x r-ib71SNNH8qVk t-oh">
+                                                            <div class="vk_bk a-h" tabindex="0" role="button" data-ved="2ahUKEwjw3ZGFxfTmAhWFonEKHSfyByMQ5nEwG3oECBQQBA">
+                                                                <table class="WgFkxc" width="282">
+                                                                    <tbody>
+                                                                        <tr class="K7Ltle">
+                                                                            <td class="SKNSIb"><strong>MON</strong>:</td>
+                                                                            <td>8.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>TUE</strong>:</td>
+                                                                            <td>8.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>WED:</strong></td>
+                                                                            <td>8.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>THUR:</strong></td>
+                                                                            <td>7.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>FRI:</strong></td>
+                                                                            <td>7.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>SAT:</strong></td>
+                                                                            <td>7.00 AM &#8211; 7.00 PM</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="SKNSIb"><strong>SUN:</strong></td>
+                                                                            <td>Closed</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </aside>
+                                                <aside id="text-3" class="widget_number_3 column-1_4 widget widget_text">
+                                                    <h5 class="widget_title">LOCATION</h5>
+                                                    <div class="textwidget">
+                                                        <p>ONGATA RONGAI,<br /> Behind Maiyan Mall.<br /> +254 728 638 614<br /> cassienationbeauty@gmail.com
+                                                        </p>
+                                                    </div>
+                                                </aside>
+                                                <aside id="custom_html-2" class="widget_text widget_number_4 column-1_4 widget widget_custom_html">
+                                                    <h5 class="widget_title">MAPS @ mobile servics(within Rongai and Nairobi) TEL:0728638614</h5>
+                                                    <div class="textwidget custom-html-widget"><iframe width="600" height="550" frameborder="0" style="border:0;" allowfullscreen="" data-src=<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1578.6087842314682!2d36.762012522071764!3d-1.3986082679560519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f05ae263acb0b%3A0xb5779e0583af6c4b!2sSerenity%20Plaza!5e0!3m2!1sen!2ske!4v1669624678818!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                                            <class="lazyload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></iframe> </div>
+                                                </aside>
+                                            </div>
+                                            <!-- /.columns_wrap -->
+                                        </div>
+                                        <!-- /.content_wrap -->
+                                    </div>
+                                    <!-- /.footer_wrap_inner -->
+                                </footer>
+                                <!-- /.footer_wrap -->
+
+                                <div class="copyright_wrap copyright_style_menu  scheme_original">
+                                    <div class="copyright_wrap_inner">
+                                        <div class="content_wrap">
+                                            <div class="copyright_text">Cassienation Beauty Stop © 2022. All the doing OF GOD.</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.page_wrap -->
+
+                        </div>
+                        <!-- /.body_wrap -->
+
+
+
+                        <div class="custom_html_section">
+                        </div>
+
+                        <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a>
+                        <script>
+                            window.RS_MODULES = window.RS_MODULES || {};
+                            window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+                            window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+                            window.RS_MODULES.defered = true;
+                            window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+                            window.RS_MODULES.type = 'compiled';
+                        </script>
+                        <script>
+                            var ajaxRevslider;
+
+                            function rsCustomAjaxContentLoadingFunction() {
+                                // CUSTOM AJAX CONTENT LOADING FUNCTION
+                                ajaxRevslider = function(obj) {
+
+                                    // obj.type : Post Type
+                                    // obj.id : ID of Content to Load
+                                    // obj.aspectratio : The Aspect Ratio of the Container / Media
+                                    // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                                    var content = '';
+                                    var data = {
+                                        action: 'revslider_ajax_call_front',
+                                        client_action: 'get_slider_html',
+                                        token: 'ca1da9f5cd',
+                                        type: obj.type,
+                                        id: obj.id,
+                                        aspectratio: obj.aspectratio
+                                    };
+
+                                    // SYNC AJAX REQUEST
+                                    jQuery.ajax({
+                                        type: 'post',
+                                        url: 'https://www.luxenails.co.ke/wp-admin/admin-ajax.php',
+                                        dataType: 'json',
+                                        data: data,
+                                        async: false,
+                                        success: function(ret, textStatus, XMLHttpRequest) {
+                                            if (ret.success == true)
+                                                content = ret.data;
+                                        },
+                                        error: function(e) {
+                                            console.log(e);
+                                        }
+                                    });
+
+                                    // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                                    return content;
+                                };
+
+                                // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+                                var ajaxRemoveRevslider = function(obj) {
+                                    return jQuery(obj.selector + ' .rev_slider').revkill();
+                                };
+
+
+                                // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION				
+                                if (jQuery.fn.tpessential !== undefined)
+                                    if (typeof(jQuery.fn.tpessential.defaults) !== 'undefined')
+                                        jQuery.fn.tpessential.defaults.ajaxTypes.push({
+                                            type: 'revslider',
+                                            func: ajaxRevslider,
+                                            killfunc: ajaxRemoveRevslider,
+                                            openAnimationSpeed: 0.3
+                                        });
+                                // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+                                // func: the Function Name which is Called once the Item with the Post Type has been clicked
+                                // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+                                // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)					
+                            }
+
+                            var rsCustomAjaxContent_Once = false
+                            if (document.readyState === "loading")
+                                document.addEventListener('readystatechange', function() {
+                                    if ((document.readyState === "interactive" || document.readyState === "complete") && !rsCustomAjaxContent_Once) {
+                                        rsCustomAjaxContent_Once = true;
+                                        rsCustomAjaxContentLoadingFunction();
+                                    }
+                                });
+                            else {
+                                rsCustomAjaxContent_Once = true;
+                                rsCustomAjaxContentLoadingFunction();
+                            }
+                        </script>
+                        <!-- Instagram Feed JS -->
+                        <script type="text/javascript">
+                            var sbiajaxurl = "https://www.luxenails.co.ke/wp-admin/admin-ajax.php";
+                        </script>
+
+                        <div class="joinchat joinchat--left" data-settings='{"telephone":"254728638614","mobile_only":false,"button_delay":3,"whatsapp_web":false,"qr":false,"message_views":5,"message_delay":45,"message_badge":true,"message_send":"Hi Cassienation Beauty Stop. I want to enquire about your nail care services.","message_hash":"4cfcb586"}'>
+                            <div class="joinchat__button">
+                                <div class="joinchat__button__open"></div>
+                                <div class="joinchat__button__sendtext">Open chat</div>
+                                <svg class="joinchat__button__send" width="60" height="60" viewbox="0 0 400 400" stroke-linecap="round" stroke-width="33">
+				<path class="joinchat_svg__plain" d="M168.83 200.504H79.218L33.04 44.284a1 1 0 0 1 1.386-1.188L365.083 199.04a1 1 0 0 1 .003 1.808L34.432 357.903a1 1 0 0 1-1.388-1.187l29.42-99.427"/>
+				<path class="joinchat_svg__chat" d="M318.087 318.087c-52.982 52.982-132.708 62.922-195.725 29.82l-80.449 10.18 10.358-80.112C18.956 214.905 28.836 134.99 81.913 81.913c65.218-65.217 170.956-65.217 236.174 0 42.661 42.661 57.416 102.661 44.265 157.316"/>
+			</svg>
+                                <div class="joinchat__badge">1</div>
+                            </div>
+                            <div class="joinchat__box">
+                                <div class="joinchat__header">
+                                    <a class="joinchat__powered" href="https://join.chat/en/powered/?site=Luxe%20Nails%20Parlour&#038;url=https%3A%2F%2Fwww.luxenails.co.ke" rel="nofollow noopener" target="_blank">
+						Powered by <svg width="81" height="18" viewbox="0 0 1424 318"><title>Join.chat</title><path d="m171 7 6 2 3 3v5l-1 8a947 947 0 0 0-2 56v53l1 24v31c0 22-6 43-18 63-11 19-27 35-48 48s-44 18-69 18c-14 0-24-3-32-8-7-6-11-13-11-23a26 26 0 0 1 26-27c7 0 13 2 19 6l12 12 1 1a97 97 0 0 0 10 13c4 4 7 6 10 6 4 0 7-2 10-6l6-23v-1c2-12 3-28 3-48V76l-1-3-3-1h-1l-11-2c-2-1-3-3-3-7s1-6 3-7a434 434 0 0 0 90-49zm1205 43c4 0 6 1 6 3l3 36a1888 1888 0 0 0 34 0h1l3 2 1 8-1 8-3 1h-35v62c0 14 2 23 5 28 3 6 9 8 16 8l5-1 3-1c2 0 3 1 5 3s3 4 2 6c-4 10-11 19-22 27-10 8-22 12-36 12-16 0-28-5-37-15l-8-13v1h-1c-17 17-33 26-47 26-18 0-31-13-39-39-5 12-12 22-21 29s-19 10-31 10c-11 0-21-4-29-13-7-8-11-18-11-30 0-10 2-17 5-23s9-11 17-15c13-7 35-14 67-21h1v-11c0-11-2-19-5-26-4-6-8-9-14-9-3 0-5 1-5 4v1l-2 15c-2 11-6 19-11 24-6 6-14 8-23 8-5 0-9-1-13-4-3-3-5-8-5-13 0-11 9-22 26-33s38-17 60-17c41 0 62 15 62 46v58l1 11 2 8 2 3h4l5-3 1-1-1-13v-88l-3-2-12-1c-1 0-2-3-2-7s1-6 2-6c16-4 29-9 40-15 10-6 20-15 31-25 1-2 4-3 7-3zM290 88c28 0 50 7 67 22 17 14 25 34 25 58 0 26-9 46-27 61s-42 22-71 22c-28 0-50-7-67-22a73 73 0 0 1-25-58c0-26 9-46 27-61s42-22 71-22zm588 0c19 0 34 4 45 12 11 9 17 18 17 29 0 6-3 11-7 15s-10 6-17 6c-13 0-24-8-33-25-5-11-10-18-13-21s-6-5-9-5c-8 0-11 6-11 17a128 128 0 0 0 32 81c8 8 16 12 25 12 8 0 16-3 24-10 1-1 3 0 6 2 2 2 3 3 3 5-5 12-15 23-29 32s-30 13-48 13c-24 0-43-7-58-22a78 78 0 0 1-22-58c0-25 9-45 27-60s41-23 68-23zm-402-3 5 2 3 3-1 10a785 785 0 0 0-2 53v76c1 3 2 4 4 4l11 3 11-3c3 0 4-1 4-4v-82l-1-2-3-2-11-1-2-6c0-4 1-6 2-6a364 364 0 0 0 77-44l5 2 3 3v12a393 393 0 0 0-1 21c5-10 12-18 22-25 9-8 21-11 34-11 16 0 29 5 38 14 10 9 14 22 14 39v88c0 3 2 4 4 4l11 3c1 0 2 2 2 6 0 5-1 7-2 7h-1a932 932 0 0 1-49-2 462 462 0 0 0-48 2c-2 0-3-2-3-7 0-3 1-6 3-6l8-3 3-1 1-3v-62c0-14-2-24-6-29-4-6-12-9-22-9l-7 1v99l1 3 3 1 8 3h1l2 6c0 5-1 7-3 7a783 783 0 0 1-47-2 512 512 0 0 0-51 2h-1a895 895 0 0 1-49-2 500 500 0 0 0-50 2c-1 0-2-2-2-7 0-4 1-6 2-6l11-3c2 0 3-1 4-4v-82l-1-3-3-1-11-2c-1 0-2-2-2-6l2-6a380 380 0 0 0 80-44zm539-75 5 2 3 3-1 9a758 758 0 0 0-2 55v42h1c5-9 12-16 21-22 9-7 20-10 32-10 16 0 29 5 38 14 10 9 14 22 14 39v88c0 2 2 3 4 4l11 2c1 0 2 2 2 7 0 4-1 6-2 6h-1a937 937 0 0 1-49-2 466 466 0 0 0-48 2c-2 0-3-2-3-6s1-7 3-7l8-2 3-2 1-3v-61c0-14-2-24-6-29-4-6-12-9-22-9l-7 1v99l1 2 3 2 8 2h1c1 1 2 3 2 7s-1 6-3 6a788 788 0 0 1-47-2 517 517 0 0 0-51 2c-1 0-2-2-2-6 0-5 1-7 2-7l11-2c3-1 4-2 4-5V71l-1-3-3-1-11-2c-1 0-2-2-2-6l2-6a387 387 0 0 0 81-43zm-743 90c-8 0-12 7-12 20a266 266 0 0 0 33 116c3 3 6 4 9 4 8 0 12-6 12-20 0-17-4-38-11-65-8-27-15-44-22-50-3-4-6-5-9-5zm939 65c-6 0-9 4-9 13 0 8 2 16 7 22 5 7 10 10 15 10l6-2v-22c0-6-2-11-7-15-4-4-8-6-12-6zM451 0c10 0 18 3 25 10s10 16 10 26a35 35 0 0 1-35 36c-11 0-19-4-26-10-7-7-10-16-10-26s3-19 10-26 15-10 26-10zm297 249c9 0 16-3 22-8 6-6 9-12 9-20s-3-15-9-21-13-8-22-8-16 3-22 8-9 12-9 21 3 14 9 20 13 8 22 8z"/></svg>
+					</a>
+                                    <div class="joinchat__close" aria-label="Close"></div>
+                                </div>
+                                <div class="joinchat__box__scroll">
+                                    <div class="joinchat__box__content">
+                                        <div class="joinchat__message">Hello there,<br>Thank you for choosing Cassienation Beauty Stop.<br>You can make your enquiry via Whatsapp or CALL our customer support team via 0728638614<br><br>Karibu.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <svg style="width:0;height:0;position:absolute"><defs><clipPath id="joinchat__message__peak"><path d="M17 25V0C17 12.877 6.082 14.9 1.031 15.91c-1.559.31-1.179 2.272.004 2.272C9.609 18.182 17 18.088 17 25z"/></clipPath></defs></svg>
+                        </div>
+                        <script type="text/html" id="wpb-modifications"></script>
+                        <script type="text/javascript">
+                            (function() {
+                                var c = document.body.className;
+                                c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+                                document.body.className = c;
+                            })();
+                        </script>
+                        <script>
+                            if (typeof revslider_showDoubleJqueryError === "undefined") {
+                                function revslider_showDoubleJqueryError(sliderID) {
+                                    console.log("You have some jquery.js library include that comes after the Slider Revolution files js inclusion.");
+                                    console.log("To fix this, you can:");
+                                    console.log("1. Set 'Module General Options' -> 'Advanced' -> 'jQuery & OutPut Filters' -> 'Put JS to Body' to on");
+                                    console.log("2. Find the double jQuery.js inclusion and remove it");
+                                    return "Double Included jQuery Library";
+                                }
+                            }
+                        </script>
+                        <link rel='stylesheet' id='nailsbar-messages-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/core.messages/core.messages.css' type='text/css' media='all' />
+                        <link rel='stylesheet' id='magnific-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/magnific/magnific-popup.css' type='text/css' media='all' />
+                        <link rel='stylesheet' id='swiperslider-style-css' href='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/swiper/swiper.css' type='text/css' media='all' />
+                        <link rel='stylesheet' id='rs-plugin-settings-css' href='https://www.luxenails.co.ke/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.12' type='text/css' media='all' />
+                        <style id='rs-plugin-settings-inline-css' type='text/css'>
+                            #rev_slider_2_1_wrapper .uranus.tparrows {
+                                width: 50px;
+                                height: 50px;
+                                background: rgba(255, 255, 255, 0)
+                            }
+
+                            #rev_slider_2_1_wrapper .uranus.tparrows:before {
+                                width: 50px;
+                                height: 50px;
+                                line-height: 50px;
+                                font-size: 40px;
+                                transition: all 0.3s;
+                                -webkit-transition: all 0.3s
+                            }
+
+                            #rev_slider_2_1_wrapper .uranus.tparrows.rs-touchhover:before {
+                                opacity: 0.75
+                            }
+                        </style>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/jquery/ui/core.min.js?ver=1.13.1' id='jquery-ui-core-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/jquery/ui/datepicker.min.js?ver=1.13.1' id='jquery-ui-datepicker-js'></script>
+                        <script type='text/javascript' id='jquery-ui-datepicker-js-after'>
+                            jQuery(function(jQuery) {
+                                jQuery.datepicker.setDefaults({
+                                    "closeText": "Close",
+                                    "currentText": "Today",
+                                    "monthNames": ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+                                    "monthNamesShort": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                                    "nextText": "Next",
+                                    "prevText": "Previous",
+                                    "dayNames": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                                    "dayNamesShort": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+                                    "dayNamesMin": ["S", "M", "T", "W", "T", "F", "S"],
+                                    "dateFormat": "MM d, yy",
+                                    "firstDay": 1,
+                                    "isRTL": false
+                                });
+                            });
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/spin.min.js?ver=2.0.1' id='booked-spin-js-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/spin.jquery.js?ver=2.0.1' id='booked-spin-jquery-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/tooltipster/js/jquery.tooltipster.min.js?ver=3.3.0' id='booked-tooltipster-js'></script>
+                        <script type='text/javascript' id='booked-functions-js-extra'>
+                            /* <![CDATA[ */
+                            var booked_js_vars = {
+                                "ajax_url": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+                                "profilePage": "",
+                                "publicAppointments": "",
+                                "i18n_confirm_appt_delete": "Are you sure you want to cancel this appointment?",
+                                "i18n_please_wait": "Please wait ...",
+                                "i18n_wrong_username_pass": "Wrong username\/password combination.",
+                                "i18n_fill_out_required_fields": "Please fill out all required fields.",
+                                "i18n_guest_appt_required_fields": "Please enter your name to book an appointment.",
+                                "i18n_appt_required_fields": "Please enter your name, your email address and choose a password to book an appointment.",
+                                "i18n_appt_required_fields_guest": "Please fill in all \"Information\" fields.",
+                                "i18n_password_reset": "Please check your email for instructions on resetting your password.",
+                                "i18n_password_reset_error": "That username or email is not recognized."
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/assets/js/functions.js?ver=2.3.5' id='booked-functions-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=5.6.4' id='swv-js'></script>
+                        <script type='text/javascript' id='contact-form-7-js-extra'>
+                            /* <![CDATA[ */
+                            var wpcf7 = {
+                                "api": {
+                                    "root": "https:\/\/www.luxenails.co.ke\/wp-json\/",
+                                    "namespace": "contact-form-7\/v1"
+                                }
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.6.4' id='contact-form-7-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/popup-anything-on-click/assets/js/popupaoc-public.js?ver=2.1.6' id='popupaoc-public-js-js'></script>
+                        <script type='text/javascript' id='trx_utils-js-extra'>
+                            /* <![CDATA[ */
+                            var TRX_UTILS_STORAGE = {
+                                "ajax_url": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+                                "ajax_nonce": "4c4e4c615d",
+                                "site_url": "https:\/\/www.luxenails.co.ke",
+                                "user_logged_in": "0",
+                                "email_mask": "^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$",
+                                "msg_ajax_error": "Invalid server answer!",
+                                "msg_error_global": "Invalid field's value!",
+                                "msg_name_empty": "The name can't be empty",
+                                "msg_email_empty": "Too short (or empty) email address",
+                                "msg_email_not_valid": "E-mail address is invalid",
+                                "msg_text_empty": "The message text can't be empty",
+                                "msg_send_complete": "Send message complete!",
+                                "msg_send_error": "Transmit failed!",
+                                "login_via_ajax": "1",
+                                "msg_login_empty": "The Login field can't be empty",
+                                "msg_login_long": "The Login field is too long",
+                                "msg_password_empty": "The password can't be empty and shorter then 4 characters",
+                                "msg_password_long": "The password is too long",
+                                "msg_login_success": "Login success! The page will be reloaded in 3 sec.",
+                                "msg_login_error": "Login failed!",
+                                "msg_not_agree": "Please, read and check 'Terms and Conditions'",
+                                "msg_email_long": "E-mail address is too long",
+                                "msg_password_not_equal": "The passwords in both fields are not equal",
+                                "msg_registration_success": "Registration success! Please log in!",
+                                "msg_registration_error": "Registration failed!"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/trx_utils/js/trx_utils.js' id='trx_utils-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.6.1' id='js-cookie-js'></script>
+                        <script type='text/javascript' id='woocommerce-js-extra'>
+                            /* <![CDATA[ */
+                            var woocommerce_params = {
+                                "ajax_url": "\/wp-admin\/admin-ajax.php",
+                                "wc_ajax_url": "\/?wc-ajax=%%endpoint%%"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=6.6.1' id='woocommerce-js'></script>
+                        <script type='text/javascript' id='wc-cart-fragments-js-extra'>
+                            /* <![CDATA[ */
+                            var wc_cart_fragments_params = {
+                                "ajax_url": "\/wp-admin\/admin-ajax.php",
+                                "wc_ajax_url": "\/?wc-ajax=%%endpoint%%",
+                                "cart_hash_key": "wc_cart_hash_6e5fe02757d23d1dc2465a88772a3a67",
+                                "fragment_name": "wc_fragments_6e5fe02757d23d1dc2465a88772a3a67",
+                                "request_timeout": "5000"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=6.6.1' id='wc-cart-fragments-js'></script>
+                        <script type='text/javascript' id='booked-fea-js-js-extra'>
+                            /* <![CDATA[ */
+                            var booked_fea_vars = {
+                                "ajax_url": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+                                "i18n_confirm_appt_delete": "Are you sure you want to cancel this appointment?",
+                                "i18n_confirm_appt_approve": "Are you sure you want to approve this appointment?"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/booked/includes/add-ons/frontend-agents/js/functions.js?ver=2.3.5' id='booked-fea-js-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/superfish.js' id='superfish-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/jquery.slidemenu.js' id='slidemenu-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/core.utils.js' id='nailsbar-core-utils-script-js'></script>
+                        <script type='text/javascript' id='nailsbar-core-init-script-js-extra'>
+                            /* <![CDATA[ */
+                            var NAILSBAR_STORAGE = {
+                                "theme_font": "Droid Serif",
+                                "theme_skin_color": "#222222",
+                                "theme_skin_bg_color": "#ffffff",
+                                "strings": {
+                                    "ajax_error": "Invalid server answer",
+                                    "bookmark_add": "Add the bookmark",
+                                    "bookmark_added": "Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab &#039;Bookmarks&#039;",
+                                    "bookmark_del": "Delete this bookmark",
+                                    "bookmark_title": "Enter bookmark title",
+                                    "bookmark_exists": "Current page already exists in the bookmarks list",
+                                    "search_error": "Error occurs in AJAX search! Please, type your query and press search icon for the traditional search way.",
+                                    "email_confirm": "On the e-mail address &quot;%s&quot; we sent a confirmation email. Please, open it and click on the link.",
+                                    "reviews_vote": "Thanks for your vote! New average rating is:",
+                                    "reviews_error": "Error saving your vote! Please, try again later.",
+                                    "error_like": "Error saving your like! Please, try again later.",
+                                    "error_global": "Global error text",
+                                    "name_empty": "The name can&#039;t be empty",
+                                    "name_long": "Too long name",
+                                    "email_empty": "Too short (or empty) email address",
+                                    "email_long": "Too long email address",
+                                    "email_not_valid": "Invalid email address",
+                                    "subject_empty": "The subject can&#039;t be empty",
+                                    "subject_long": "Too long subject",
+                                    "text_empty": "The message text can&#039;t be empty",
+                                    "text_long": "Too long message text",
+                                    "send_complete": "Send message complete!",
+                                    "send_error": "Transmit failed!",
+                                    "login_empty": "The Login field can&#039;t be empty",
+                                    "login_long": "Too long login field",
+                                    "login_success": "Login success! The page will be reloaded in 3 sec.",
+                                    "login_failed": "Login failed!",
+                                    "password_empty": "The password can&#039;t be empty and shorter then 4 characters",
+                                    "password_long": "Too long password",
+                                    "password_not_equal": "The passwords in both fields are not equal",
+                                    "registration_success": "Registration success! Please log in!",
+                                    "registration_failed": "Registration failed!",
+                                    "geocode_error": "Geocode was not successful for the following reason:",
+                                    "googlemap_not_avail": "Google map API not available!",
+                                    "editor_save_success": "Post content saved!",
+                                    "editor_save_error": "Error saving post data!",
+                                    "editor_delete_post": "You really want to delete the current post?",
+                                    "editor_delete_post_header": "Delete post",
+                                    "editor_delete_success": "Post deleted!",
+                                    "editor_delete_error": "Error deleting post!",
+                                    "editor_caption_cancel": "Cancel",
+                                    "editor_caption_close": "Close"
+                                },
+                                "use_ajax_views_counter": "",
+                                "ajax_url": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php",
+                                "ajax_nonce": "4c4e4c615d",
+                                "site_url": "https:\/\/www.luxenails.co.ke",
+                                "vc_edit_mode": "",
+                                "theme_skin": "less",
+                                "slider_height": "100",
+                                "system_message": {
+                                    "message": "",
+                                    "status": "",
+                                    "header": ""
+                                },
+                                "user_logged_in": "",
+                                "toc_menu": "float",
+                                "toc_menu_home": "1",
+                                "toc_menu_top": "1",
+                                "menu_fixed": "1",
+                                "menu_mobile": "960",
+                                "menu_slider": "1",
+                                "menu_cache": "",
+                                "demo_time": "0",
+                                "media_elements_enabled": "1",
+                                "ajax_search_enabled": "",
+                                "ajax_search_min_length": "3",
+                                "ajax_search_delay": "200",
+                                "css_animation": "1",
+                                "menu_animation_in": "fadeInUp",
+                                "menu_animation_out": "fadeOutDown",
+                                "popup_engine": "magnific",
+                                "email_mask": "^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$",
+                                "contacts_maxlength": "1000",
+                                "comments_maxlength": "1000",
+                                "remember_visitors_settings": "",
+                                "admin_mode": "",
+                                "isotope_resize_delta": "0.3",
+                                "error_message_box": null,
+                                "viewmore_busy": "",
+                                "video_resize_inited": "",
+                                "top_panel_height": "0"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/core.init.js' id='nailsbar-core-init-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/js/theme.init.js' id='nailsbar-theme-init-script-js'></script>
+                        <script type='text/javascript' id='mediaelement-core-js-before'>
+                            var mejsL10n = {
+                                "language": "en",
+                                "strings": {
+                                    "mejs.download-file": "Download File",
+                                    "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/",
+                                    "mejs.fullscreen": "Fullscreen",
+                                    "mejs.play": "Play",
+                                    "mejs.pause": "Pause",
+                                    "mejs.time-slider": "Time Slider",
+                                    "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.",
+                                    "mejs.live-broadcast": "Live Broadcast",
+                                    "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.",
+                                    "mejs.unmute": "Unmute",
+                                    "mejs.mute": "Mute",
+                                    "mejs.volume-slider": "Volume Slider",
+                                    "mejs.video-player": "Video Player",
+                                    "mejs.audio-player": "Audio Player",
+                                    "mejs.captions-subtitles": "Captions\/Subtitles",
+                                    "mejs.captions-chapters": "Chapters",
+                                    "mejs.none": "None",
+                                    "mejs.afrikaans": "Afrikaans",
+                                    "mejs.albanian": "Albanian",
+                                    "mejs.arabic": "Arabic",
+                                    "mejs.belarusian": "Belarusian",
+                                    "mejs.bulgarian": "Bulgarian",
+                                    "mejs.catalan": "Catalan",
+                                    "mejs.chinese": "Chinese",
+                                    "mejs.chinese-simplified": "Chinese (Simplified)",
+                                    "mejs.chinese-traditional": "Chinese (Traditional)",
+                                    "mejs.croatian": "Croatian",
+                                    "mejs.czech": "Czech",
+                                    "mejs.danish": "Danish",
+                                    "mejs.dutch": "Dutch",
+                                    "mejs.english": "English",
+                                    "mejs.estonian": "Estonian",
+                                    "mejs.filipino": "Filipino",
+                                    "mejs.finnish": "Finnish",
+                                    "mejs.french": "French",
+                                    "mejs.galician": "Galician",
+                                    "mejs.german": "German",
+                                    "mejs.greek": "Greek",
+                                    "mejs.haitian-creole": "Haitian Creole",
+                                    "mejs.hebrew": "Hebrew",
+                                    "mejs.hindi": "Hindi",
+                                    "mejs.hungarian": "Hungarian",
+                                    "mejs.icelandic": "Icelandic",
+                                    "mejs.indonesian": "Indonesian",
+                                    "mejs.irish": "Irish",
+                                    "mejs.italian": "Italian",
+                                    "mejs.japanese": "Japanese",
+                                    "mejs.korean": "Korean",
+                                    "mejs.latvian": "Latvian",
+                                    "mejs.lithuanian": "Lithuanian",
+                                    "mejs.macedonian": "Macedonian",
+                                    "mejs.malay": "Malay",
+                                    "mejs.maltese": "Maltese",
+                                    "mejs.norwegian": "Norwegian",
+                                    "mejs.persian": "Persian",
+                                    "mejs.polish": "Polish",
+                                    "mejs.portuguese": "Portuguese",
+                                    "mejs.romanian": "Romanian",
+                                    "mejs.russian": "Russian",
+                                    "mejs.serbian": "Serbian",
+                                    "mejs.slovak": "Slovak",
+                                    "mejs.slovenian": "Slovenian",
+                                    "mejs.spanish": "Spanish",
+                                    "mejs.swahili": "Swahili",
+                                    "mejs.swedish": "Swedish",
+                                    "mejs.tagalog": "Tagalog",
+                                    "mejs.thai": "Thai",
+                                    "mejs.turkish": "Turkish",
+                                    "mejs.ukrainian": "Ukrainian",
+                                    "mejs.vietnamese": "Vietnamese",
+                                    "mejs.welsh": "Welsh",
+                                    "mejs.yiddish": "Yiddish"
+                                }
+                            };
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16' id='mediaelement-core-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=6.0.3' id='mediaelement-migrate-js'></script>
+                        <script type='text/javascript' id='mediaelement-js-extra'>
+                            /* <![CDATA[ */
+                            var _wpmejsSettings = {
+                                "pluginPath": "\/wp-includes\/js\/mediaelement\/",
+                                "classPrefix": "mejs-",
+                                "stretching": "responsive"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=6.0.3' id='wp-mediaelement-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/social/social-share.js' id='nailsbar-social-share-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=4.5.7' id='joinchat-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/instagram-widget-by-wpzoom/dist/scripts/library/lazy.js?ver=1656438322' id='zoom-instagram-widget-lazy-load-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/wp-smushit/app/assets/js/smush-lazy-load.min.js?ver=3.10.2' id='smush-lazy-load-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/trx_utils/shortcodes/theme.shortcodes.js' id='nailsbar-shortcodes-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/core.messages/core.messages.js' id='nailsbar-messages-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/magnific/jquery.magnific-popup.min.js?ver=6.0.3' id='magnific-script-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.2.0' id='wpb_composer_front_js-js'></script>
+                        <script type='text/javascript' id='sbi_scripts-js-extra'>
+                            /* <![CDATA[ */
+                            var sb_instagram_js_options = {
+                                "font_method": "svg",
+                                "resized_url": "https:\/\/www.luxenails.co.ke\/wp-content\/uploads\/sb-instagram-feed-images\/",
+                                "placeholder": "https:\/\/www.luxenails.co.ke\/wp-content\/plugins\/instagram-feed\/img\/placeholder.png",
+                                "ajax_url": "https:\/\/www.luxenails.co.ke\/wp-admin\/admin-ajax.php"
+                            };
+                            /* ]]> */
+                        </script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/plugins/instagram-feed/js/sbi-scripts.min.js?ver=6.1' id='sbi_scripts-js'></script>
+                        <script type='text/javascript' src='https://www.luxenails.co.ke/wp-content/themes/nailsbar/fw/js/swiper/swiper.js' id='swiperslider-script-js'></script>
+                        <script id="rs-initialisation-scripts">
+                            var tpj = jQuery;
+
+                            var revapi2;
+
+                            if (window.RS_MODULES === undefined) window.RS_MODULES = {};
+                            if (RS_MODULES.modules === undefined) RS_MODULES.modules = {};
+                            RS_MODULES.modules["revslider21"] = {
+                                once: RS_MODULES.modules["revslider21"] !== undefined ? RS_MODULES.modules["revslider21"].once : undefined,
+                                init: function() {
+                                    window.revapi2 = window.revapi2 === undefined || window.revapi2 === null || window.revapi2.length === 0 ? document.getElementById("rev_slider_2_1") : window.revapi2;
+                                    if (window.revapi2 === null || window.revapi2 === undefined || window.revapi2.length == 0) {
+                                        window.revapi2initTry = window.revapi2initTry === undefined ? 0 : window.revapi2initTry + 1;
+                                        if (window.revapi2initTry < 20) requestAnimationFrame(function() {
+                                            RS_MODULES.modules["revslider21"].init()
+                                        });
+                                        return;
+                                    }
+                                    window.revapi2 = jQuery(window.revapi2);
+                                    if (window.revapi2.revolution == undefined) {
+                                        revslider_showDoubleJqueryError("rev_slider_2_1");
+                                        return;
+                                    }
+                                    revapi2.revolutionInit({
+                                        revapi: "revapi2",
+                                        sliderLayout: "fullwidth",
+                                        duration: 5000,
+                                        visibilityLevels: "1240,1024,778,480",
+                                        gridwidth: 960,
+                                        gridheight: 530,
+                                        lazyType: "smart",
+                                        perspectiveType: "local",
+                                        responsiveLevels: "1240,1024,778,480",
+                                        progressBar: {
+                                            color: "rgba(0,0,0,0.15)",
+                                            vertical: "top",
+                                            size: 5
+                                        },
+                                        navigation: {
+                                            mouseScrollNavigation: false,
+                                            onHoverStop: false,
+                                            touch: {
+                                                touchenabled: true,
+                                                swipe_min_touches: 50
+                                            },
+                                            arrows: {
+                                                enable: true,
+                                                style: "uranus",
+                                                left: {
+                                                    h_offset: 30
+                                                },
+                                                right: {
+                                                    h_offset: 30
+                                                }
+                                            }
+                                        },
+                                        parallax: {
+                                            levels: [2, 3, 4, 5, 6, 7, 12, 16, 10, 50, 47, 48, 49, 50, 51, 55],
+                                            type: "mouse",
+                                            origo: "slidercenter",
+                                            speed: 2000
+                                        },
+                                        viewPort: {
+                                            global: true,
+                                            globalDist: "-200px",
+                                            enable: false,
+                                            visible_area: "20%"
+                                        },
+                                        fallbacks: {
+                                            allowHTML5AutoPlayOnAndroid: true
+                                        },
+                                    });
+
+                                }
+                            } // End of RevInitScript
+
+                            if (window.RS_MODULES.checkMinimal !== undefined) {
+                                window.RS_MODULES.checkMinimal();
+                            };
+                        </script>
+
+                        <!-- Optimize Scripts & Styles by Seismic Pixels -->
+
+</body>
+
+</html>
